@@ -40,6 +40,10 @@ body{
   letter-spacing: .2rem;
   margin-bottom: 2rem;
   color:$color-white;
+
+  &__testimonials{
+    color:$color-black
+  }
 }
 .heading-tertiary{
   font-size: 1.8rem;

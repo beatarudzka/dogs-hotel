@@ -3,7 +3,7 @@
   position: relative;
   background-image: linear-gradient(
     to right,
-     rgba($color-black, .1), rgba($color-black, .6) ), url('../../img/img-1.jpg');
+     rgba($color-white, .1), rgba($color-black, .6) ), url('../../img/img-1.jpg');
   background-size: cover;
   clip-path: polygon(0 0,100% 0,100% 75vh, 0 100%);
 
