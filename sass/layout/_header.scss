@@ -1,0 +1,19 @@
+.header{
+  height: 95vh;
+  position: relative;
+  background-image: url('../../img/img-1.jpg');
+  background-size: cover;
+  background-position: top;
+
+  &__logo-box{
+    position: absolute;
+    top:4rem;
+    left: 4rem;
+    height: 3.5rem;
+  }
+  &__logo{
+    height: 3.5rem;
+    background-color:$color-white;
+  }
+}
+
