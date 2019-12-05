@@ -1,6 +1,6 @@
 .feature-box{
   text-align: center;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.6);
+  box-shadow: 0 1.5rem 2rem rgba($color-black, 0.6);
   font-size:1.5rem;
   padding:.5rem;
   height: 55%;
@@ -13,5 +13,6 @@
   }
   &:hover{
     transform: translateY(-.5rem) scale(1.05);
+    box-shadow: 0 .5rem 6rem rgba($color-black, 0.6);
   }
 }

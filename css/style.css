@@ -168,7 +168,7 @@ body {
 
 .feature-box {
   text-align: center;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.6);
   font-size: 1.5rem;
   padding: .5rem;
   height: 55%;
@@ -178,7 +178,8 @@ body {
     margin: 2rem;
     padding: .5rem; }
   .feature-box:hover {
-    transform: translateY(-0.5rem) scale(1.05); }
+    transform: translateY(-0.5rem) scale(1.05);
+    box-shadow: 0 0.5rem 6rem rgba(0, 0, 0, 0.6); }
 
 .testimonials {
   width: 75%;
@@ -187,3 +188,13 @@ body {
   background-color: #fff;
   padding: 6rem;
   border-radius: 3px; }
+  .testimonials__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: sandybrown;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin: 1rem; }
