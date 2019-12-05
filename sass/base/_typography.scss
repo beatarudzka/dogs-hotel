@@ -11,6 +11,8 @@ body{
 .heading-primary{
   color: $color-white;
   text-transform: uppercase;
+  text-align: center;
+  padding-top:20%;
   
   &--main{
     font-size: 6rem;
