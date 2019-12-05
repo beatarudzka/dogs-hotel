@@ -11,12 +11,14 @@ body{
 .heading-primary{
   color: $color-white;
   text-transform: uppercase;
-
+  
   &--main{
     font-size: 6rem;
     display:block;
     letter-spacing: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
+    animation: moveInLeft 1s ease-out ;
+    backface-visibility: hidden;
   }
 
   &--sub{
@@ -25,6 +27,7 @@ body{
     font-weight: 700;
     letter-spacing: 1.75rem;
     margin-bottom: 6rem;
+    animation: moveInRight 1s ease-out ;
   }
 }
 
