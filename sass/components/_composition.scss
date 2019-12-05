@@ -7,6 +7,7 @@
    border-radius: 2px;
    position:absolute;
    z-index: 10;
+   outline: .5rem solid $color-white;
 
   &--3{
       left:0;
@@ -22,6 +23,9 @@
     }
     &:hover{
       transform: scale(1.05);
+      
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .6);
+      z-index:20;
     } 
  }
 }
