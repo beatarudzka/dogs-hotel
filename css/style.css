@@ -59,6 +59,46 @@ body {
     margin-bottom: 6rem;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: .2rem;
+  margin-bottom: 2rem;
+  color: #fff; }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem; }
+
+.paragraph {
+  font-size: 1.6rem;
+  color: #fff; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.section-info {
+  background-color: #cc9d3a;
+  height: 80vh;
+  padding: 20rem 0;
+  margin-top: -20vh; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -69,3 +109,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(50%, 50%); }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+
+.col-1-of-2 {
+  width: calc((100% - 6rem)/2); }
