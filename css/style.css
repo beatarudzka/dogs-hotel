@@ -95,7 +95,7 @@ body {
 
 .section-info {
   background-color: #cc9d3a;
-  height: 80vh;
+  height: 115vh;
   padding: 20rem 0;
   margin-top: -20vh; }
 
@@ -126,3 +126,23 @@ body {
 
 .col-1-of-2 {
   width: calc((100% - 6rem)/2); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10; }
+    .composition__photo--3 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--2 {
+      left: 18rem;
+      top: 6rem; }
+    .composition__photo--1 {
+      left: -5rem;
+      top: 25rem; }
+    .composition__photo:hover {
+      transform: scale(1.05); }
