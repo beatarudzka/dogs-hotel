@@ -10,7 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0; }
 
 @keyframes moveInLeft {
   0% {
@@ -223,4 +224,5 @@ body {
       opacity: 1;
       transform: translate(-50%, 80%); }
     .testimonials__shape:hover .testimonials__shape--photo {
-      transform: skewX(8deg) translateX(-3rem) scale(1); }
+      transform: skewX(8deg) translateX(-3rem) scale(1);
+      filter: blur(2px) brightness(0.95); }

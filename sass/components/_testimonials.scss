@@ -39,6 +39,7 @@
     }
     &:hover &--photo{
       transform: skewX(8deg) translateX(-3rem) scale(1);
+      filter: blur(2px) brightness(.95);
     }
   }
 
