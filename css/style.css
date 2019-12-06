@@ -42,23 +42,21 @@ body {
 
 .heading-primary {
   color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 20%; }
+  text-transform: uppercase; }
   .heading-primary--main {
-    font-size: 6rem;
     display: block;
-    letter-spacing: 1.5rem;
-    font-weight: 900;
+    font-size: 6rem;
+    font-weight: 40rem;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
     backface-visibility: hidden; }
   .heading-primary--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
-    margin-bottom: 6rem;
-    animation: moveInRight 1s ease-out; }
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 6rem; }
 
 .heading-secondary {
   text-transform: uppercase;
@@ -117,11 +115,20 @@ body {
   position: relative;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6)), url("../../img/img-1.jpg");
   background-size: cover;
+  background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
   .header__text-box {
-    top: 50%;
+    position: absolute;
+    top: 40%;
     left: 50%;
-    transform: translate(50%, 50%); }
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .row {
   max-width: 114rem;
@@ -197,4 +204,4 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    margin: 1rem; }
+    transform: translate(-3rem); }
