@@ -5,16 +5,41 @@
   background-color: $color-white;
   padding: 6rem;
   border-radius: 3px;
+  transform: skewX(-8deg);
 
   &__shape{
     width: 15rem;
     height: 15rem;
-    background-color: sandybrown;
     float:left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem);
+    transform: translate(-3rem) skewX(8deg);
+
+    &--photo{
+      height: 100%;
+      transform: skewX(8deg) translateX(-3rem) scale(1.1);
+    }
+    &--name{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -80%) ;
+      text-transform: uppercase;
+      color: $color-white;
+      text-align: center;
+      opacity:0;
+      transition: all .3s;
+      backface-visibility: hidden;
+    }
+    &:hover &--name{
+      opacity:1;
+      transform: translate(-50%, 80%);
+    }
+    &:hover &--photo{
+      transform: skewX(8deg) translateX(-3rem) scale(1);
+    }
   }
+
 }

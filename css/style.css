@@ -194,14 +194,33 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 6rem;
-  border-radius: 3px; }
+  border-radius: 3px;
+  transform: skewX(-8deg); }
   .testimonials__shape {
     width: 15rem;
     height: 15rem;
-    background-color: sandybrown;
     float: left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem); }
+    transform: translate(-3rem) skewX(8deg); }
+    .testimonials__shape--photo {
+      height: 100%;
+      transform: skewX(8deg) translateX(-3rem) scale(1.1); }
+    .testimonials__shape--name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: all .3s;
+      backface-visibility: hidden; }
+    .testimonials__shape:hover .testimonials__shape--name {
+      opacity: 1;
+      transform: translate(-50%, 80%); }
+    .testimonials__shape:hover .testimonials__shape--photo {
+      transform: skewX(8deg) translateX(-3rem) scale(1); }
