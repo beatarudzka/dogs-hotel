@@ -114,8 +114,8 @@ body {
   padding: 15rem 0; }
 
 .section-reservation {
-  padding: 15rem 0;
-  background-image: linear-gradient(to right, rgba(167, 82, 34, 0.9), rgba(204, 157, 58, 0.3));
+  padding: 5rem 0;
+  background-image: linear-gradient(#f7f7f7);
   background-size: cover;
   height: 80vh; }
 
@@ -156,8 +156,14 @@ body {
 .col-1-of-2 {
   width: calc((100% - 6rem)/2); }
 
+.col-1-of-3 {
+  width: calc((100% - 2*6rem)/3); }
+
 .col-1-of-4 {
   width: calc((100% - 3*6rem)/4); }
+
+.col-2-of-3 {
+  width: calc(2*((100% - 2* 6rem)/3) + 6rem); }
 
 .composition {
   position: relative; }
@@ -205,17 +211,17 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 6rem;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #fff; }
   .testimonials__shape {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     float: left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem); }
+    transform: translate(-1rem); }
     .testimonials__shape--photo {
       height: 100%;
       transform: skewX(8deg) translateX(-3rem) scale(1.1); }
@@ -250,3 +256,14 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover; }
+
+.reservation {
+  background-image: url(/img/img2.jpg);
+  background-size: cover;
+  height: 50rem;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 0%);
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../../img/img2.jpg); }
