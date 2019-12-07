@@ -1,11 +1,12 @@
 .testimonials{
-  width:95%;
+  width: 95%;
+  height: 40%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
-  background-color: $color-white;
+  background-color: rgba($color-black, 0.7);
   padding: 6rem;
   border-radius: 3px;
-  transform: skewX(-8deg);
+  color:$color-white;
 
   &__shape{
     width: 15rem;
@@ -15,7 +16,7 @@
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem) skewX(8deg);
+    transform: translate(-3rem);
 
     &--photo{
       height: 100%;

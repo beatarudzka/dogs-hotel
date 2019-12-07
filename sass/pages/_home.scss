@@ -12,6 +12,16 @@
   margin:0;
 }
 .section-testimonials{
-position: relative;
-padding: 15rem 0;
+  position: relative;
+  height: 80vh;
+  padding: 15rem 0;
+}
+
+.section-reservation{
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right,
+     rgba($color-red-dark, .9), rgba($color-yellow-dark, .3) );
+  background-size: cover;
+  height: 80vh;
 }

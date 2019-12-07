@@ -7,7 +7,8 @@
   scroll-behavior: smooth; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  padding: 0; }
 
 body {
   box-sizing: border-box;
@@ -104,12 +105,19 @@ body {
 .section-features {
   height: 40vh;
   padding: 4rem 2rem;
-  background-color: #2A441D;
+  background-color: #111619;
   margin: 0; }
 
 .section-testimonials {
   position: relative;
+  height: 80vh;
   padding: 15rem 0; }
+
+.section-reservation {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right, rgba(167, 82, 34, 0.9), rgba(204, 157, 58, 0.3));
+  background-size: cover;
+  height: 80vh; }
 
 .header {
   height: 95vh;
@@ -181,7 +189,7 @@ body {
   padding: .5rem;
   height: 55%;
   border-radius: 3px;
-  background-color: #CDC4B2; }
+  background-color: #fff; }
   .feature-box__text {
     height: 40%;
     margin: 2rem;
@@ -192,12 +200,13 @@ body {
 
 .testimonials {
   width: 95%;
+  height: 40%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 6rem;
   border-radius: 3px;
-  transform: skewX(-8deg); }
+  color: #fff; }
   .testimonials__shape {
     width: 15rem;
     height: 15rem;
@@ -206,7 +215,7 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem) skewX(8deg); }
+    transform: translate(-3rem); }
     .testimonials__shape--photo {
       height: 100%;
       transform: skewX(8deg) translateX(-3rem) scale(1.1); }
