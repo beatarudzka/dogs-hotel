@@ -137,7 +137,6 @@
             <div class="testimonials">
               <figure class="testimonials__shape">
                 <img src="./img/person-1.jpg" alt="Photo of client" class="testimonials__shape--photo" />
-                <figcaption class="testimonials__shape--name">Roberto63</figcaption>
               </figure>
               <div class="testimonials-text">
                 <h3 class="heading-tertiary u-margin-bottom-small">
@@ -155,7 +154,6 @@
             <div class="testimonials">
               <figure class="testimonials__shape">
                 <img src="./img/dog-1.jpg" alt="Photo of client" class="testimonials__shape--photo" />
-                <figcaption class="testimonials__shape--name">Rex</figcaption>
               </figure>
               <div class="testimonials-text">
                 <h3 class="heading-tertiary u-margin-bottom-small">
@@ -172,14 +170,43 @@
       </section>
 
       <section class="section-reservation">
+
         <div class="row">
           <div class="col-1-of-3">
-
+            <div class="reservation__logo-box">
+              <img class="reservation__logo" src="./img/review_us.png" alt="logo" />
+              <img class="reservation__logo" src="./img/2016.png" alt="logo" />
+              <img class="reservation__logo" src="./img/wordofmouth-2019-sa-colour.png" alt="logo" />
+            </div>
           </div>
           <div class="col-2-of-3">
-
             <div class="reservation">
+              <div class="reservatiom__form">
+                <form action="#" class="form">
+                  <h2 class="heading-tertiary__reservation heading-tertiary u-margin-bottom-small">
+                    Start booking now
+                  </h2>
+                  <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Full Name" required id="name">
+                    <label for="name" class="form__label"> Full Name</label>
+                  </div>
 
+                  <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email address" required id="email">
+                    <label for="email" class="form__label"> Email address</label>
+                  </div>
+                  <div class="form_group">
+                    <div class="form_radio-group">
+                      <input type="radio" class="form__radio-input" id="hotel" name="service">
+                      <label for="hotel" class="form__radio-label">Book a room</label>
+                    </div>
+                    <div class="form_radio-group">
+                      <input type="radio" class="form__radio-input" id="walk" name="service">
+                      <label for="walk" class="form__radio-label">Book a walk with a dog</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

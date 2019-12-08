@@ -48,6 +48,11 @@ body{
   font-weight: 700;
   text-transform: uppercase;
   margin-top: .5rem;
+
+  &__reservation{
+    padding-left: 2rem ;
+    padding-top: 3rem;
+  }
 }
 .paragraph{
   font-size: $default-font-size;
