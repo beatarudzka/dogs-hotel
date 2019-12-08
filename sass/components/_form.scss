@@ -38,4 +38,43 @@
     visibility: hidden;
     transform: translateY(-3rem);
   }
+  &__radio-group{
+    padding-left: 2rem;
+    width: 50%;
+    display: inline-block;
+  }
+  &__radio-label{
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  &__radio-button{
+    height: 2rem;
+    width: 2rem;
+    border:5px solid $color-red-dark;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left:-2rem;
+    top:-.3rem;
+
+    &::after{
+      content:"";
+      display: block;
+      height: .5rem;
+      width: .5rem;
+      border-radius: 50%;
+      background-color: $color-red-dark;
+      position: absolute;
+      left:.2rem;
+      top:.3rem;
+      opacity:0;
+      transition: opacity 1s;
+    }
+  }
+  &__radio-input:checked ~ &__radio-label &__radio-button::after{
+    opacity: 1;
+  }
 }

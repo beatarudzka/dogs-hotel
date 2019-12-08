@@ -11,8 +11,13 @@
                   rgba($color-white, .6)0%,
                   rgba($color-white, .6)50%,
                   transparent 50%), url(../../img/img2.jpg);
+  &__logo-box{
+    height: 100%;
+   }
   &__logo{
-      height: 15rem;
+      height: 14rem;
       display: block;
+      margin: 3rem;
+      cursor: pointer;
   }
 }
