@@ -1,4 +1,5 @@
 .btn{
+  &,
   &:link,
   &:visited{
     position:relative;
@@ -9,6 +10,9 @@
     transition: all .2s;
     box-shadow: 0 1rem 2rem rgba($color-black, .4);
     font-size: $default-font-size;
+
+    border: none;
+    cursor:pointer;
 
     &--red{
       background-color: $color-red-dark;
@@ -66,4 +70,3 @@
     }
   }
   }
-}
