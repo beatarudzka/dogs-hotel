@@ -1,10 +1,61 @@
 .navigation{
   &__checkbox{
+    display: none;
+  }
+  &__footer{
+    color:$color-grey-dark-3;
+    padding: 2rem 0;
+    bottom:10%;
+    position: absolute;
+    transform: translate(90%, 50%);
+    list-style: none;
 
+    &--item{
+      display: inline-block;
+      padding: 2rem;
+      color: $color-grey-light-1;
+    }
+
+    &--link{
+      &:link,
+      &:visited{
+        position: relative;
+        font-size: 2rem;
+        font-weight: 300;
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-grey-light-1;
+      }
+      &:hover,
+      &:active{
+        text-decoration: none;
+      }
+      &::after{
+        border-radius: 1rem;
+        border-top: .2rem solid $color-red-dark;
+        content:"";
+        position: absolute;
+        right:100%;
+        bottom:.14rem;
+        left:0;
+        transition: right .4s cubic-bezier(0,.5,0,1),
+                    border-color .4s ease-out;
+      }
+      &:hover::after{
+        right:0;
+        border-color: $color-red-dark;
+      }
+    }
   }
 
   &__button{
-
+    height: 10rem;
+    width: 10rem;
+    position: fixed;
+    top:7rem;
+    right:7rem;
+    background-color: $color-red-dark;
+    z-index:2000;
   }
   &__bg{
     height: 9.5rem;
@@ -12,18 +63,74 @@
     position: fixed;
     top:6.5rem;
     right:6.5rem;
-    background-image: radial-gradient($color-white, $color-grey-light-1);
-  }
-  &_nav{
+    background-color: rgba($color-grey-dark-3, 0.96);
+    border: $color-white;
+    z-index:1000;
 
+    transform: scale(80);
+  }
+  &__nav{
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index: 1500;
+  }
+  &__logo-box{
+    position:relative;
+    display:inline-block;
+    width: 4.5rem;
+    top:10%;
+    left:50%;
+    transform:translate(-50%, -50%)
+  }
+
+  &__logo{
+    width: 8.5rem;
+    text-align: center;
+    padding-top: 3rem;
   }
   &__list{
-
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
   }
   &__item{
-
+    display: inline-block;
+    padding: 1rem;
   }
-  &_link{
-
+  &__link{
+    &:link,
+    &:visited{
+      position: relative;
+      font-size: 5rem;
+      font-weight: 300;
+      text-decoration: none;
+      cursor: pointer;
+      color: $color-white;
+    }
+    &:hover,
+    &:active{
+      text-decoration: none;
+    }
+    &::after{
+      border-radius: 1rem;
+      border-top: .2rem solid $color-red-dark;
+      content:"";
+      position: absolute;
+      right:100%;
+      bottom:.24rem;
+      left:0;
+      transition: right .4s cubic-bezier(0,.5,0,1),
+                  border-color .4s ease-out;
+    }
+    &:hover::after{
+      right:0;
+      border-color: $color-red-dark;
+    }
   }
 }
