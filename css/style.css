@@ -57,31 +57,30 @@ body {
   padding: 0; }
 
 .heading-primary {
-  color: #fff;
-  text-transform: uppercase; }
+  color: #fff; }
   .heading-primary--main {
     display: block;
-    font-size: 6rem;
-    font-weight: 40rem;
-    letter-spacing: 3.5rem;
+    font-size: 3rem;
+    font-weight: 600;
     animation: moveInLeft 1s ease-out;
     backface-visibility: hidden; }
   .heading-primary--sub {
     display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
+    font-size: 8rem;
+    font-weight: 400;
     animation: moveInRight 1s ease-out;
     margin-bottom: 6rem; }
+  .heading-primary--description {
+    font-weight: 200; }
 
 .heading-secondary {
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 7.5rem;
+  font-weight: 300;
   display: inline-block;
   letter-spacing: .2rem;
-  margin-bottom: 2rem;
-  color: #fff; }
+  margin-bottom: .5rem;
+  color: #000;
+  display: block; }
   .heading-secondary__testimonials {
     color: #000; }
 
@@ -102,9 +101,9 @@ body {
 
 .paragraph {
   font-size: 1.6rem;
-  color: #fff; }
+  color: #000; }
   .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+    margin-bottom: 2rem; }
 
 .dark-big-span {
   color: #808080;
@@ -112,6 +111,10 @@ body {
 
 .u-center-text {
   text-align: center; }
+
+.u-left-text {
+  text-align: start;
+  margin-left: 14rem; }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
@@ -123,7 +126,7 @@ body {
   margin-bottom: 8rem; }
 
 .section-info {
-  background-color: #cc9d3a;
+  background-color: #EBECF0;
   height: 115vh;
   padding: 20rem 0;
   margin-top: -20vh; }
@@ -141,7 +144,7 @@ body {
 
 .section-reservation {
   padding: 6rem 0;
-  background-image: linear-gradient(#a6a6a6);
+  background-image: linear-gradient(#EBECF0);
   background-size: cover;
   height: 90vh; }
 
@@ -152,13 +155,13 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  animation: slide 20s infinite; }
+  animation: slide 30s infinite; }
   .header__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem; }
+    top: 3.5rem;
+    left: 3.5rem; }
   .header__logo {
-    height: 6.5rem;
+    height: 3.5rem;
     position: fixed; }
   .header__text-box {
     position: absolute;
@@ -238,7 +241,7 @@ body {
   z-index: 2000;
   text-align: center;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #e74c3c;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 .navigation__bg {
@@ -325,7 +328,7 @@ body {
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 4rem;
     height: 2px;
-    background-color: #333;
+    background-color: #fff;
     display: inline-block; }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
@@ -609,7 +612,7 @@ body {
     .footer__newsletter--sign-up {
       cursor: pointer;
       text-decoration: none;
-      color: #a6a6a6; }
+      color: #EBECF0; }
   .footer__navigation {
     margin-left: 2rem;
     border-top: 1px solid #fff;

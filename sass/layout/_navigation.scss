@@ -57,7 +57,7 @@
     z-index:2000;
     text-align: center;
     cursor: pointer;
-    background-color: $color-white;
+    background-color: $color-red-dark;
     box-shadow: 0 .5rem .5rem rgba($color-black, .2);
   }
   &__bg{
@@ -70,7 +70,6 @@
     z-index:1000;
     transition: all .8s;
 
-    // transform: scale(80);
   }
   &__nav{
     height: 100vh;
@@ -158,7 +157,7 @@
     &::after{
       width: 4rem;
       height: 2px;
-      background-color: $color-grey-dark-3;
+      background-color: $color-white;
       display:inline-block;
     }
     &::before,

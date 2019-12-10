@@ -7,15 +7,15 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0,100% 0,100% 75vh, 0 100%);
-  animation: slide 20s infinite;
+  animation: slide 30s infinite;
 
   &__logo-box{
     position: absolute;
-    top:4rem;
-    left: 4rem;
+    top:3.5rem;
+    left: 3.5rem;
   }
   &__logo{
-    height: 6.5rem;
+    height: 3.5rem;
     position:fixed;
   }
   &__text-box{
