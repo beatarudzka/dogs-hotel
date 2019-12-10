@@ -3,7 +3,7 @@
   position: relative;
   background-image: linear-gradient(
     to right,
-     rgba($color-white, .1), rgba($color-black, .6) ), url('../../img/img-1.jpg');
+     rgba($color-black, .5), rgba($color-black, .6) ), url('../../img/img-1.jpg');
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0,100% 0,100% 75vh, 0 100%);
@@ -15,6 +15,7 @@
   }
   &__logo{
     height: 6.5rem;
+    position:fixed;
   }
   &__text-box{
     position: absolute;
@@ -23,5 +24,6 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
 }
 
