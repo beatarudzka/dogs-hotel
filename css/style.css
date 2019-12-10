@@ -8,11 +8,13 @@
 
 html {
   font-size: 62.5%;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 body {
   box-sizing: border-box;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 @keyframes moveInLeft {
   0% {
@@ -34,13 +36,25 @@ body {
     opacity: 100%;
     transform: translate(0); } }
 
+@keyframes slide {
+  0% {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/jenny-marvin.jpg); }
+  25% {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/julian-schiemann.jpg); }
+  50% {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/camilo-fierro.jpg); }
+  75% {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/img-1.jpg); }
+  100% {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/meg-sanchez.jpg); } }
+
 body {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem; }
+  padding: 0; }
 
 .heading-primary {
   color: #fff;
@@ -83,7 +97,7 @@ body {
     font-size: 1.9rem; }
   .heading-tertiary__invitation {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-transform: initial; }
 
 .paragraph {
@@ -137,7 +151,8 @@ body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../../img/img-1.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  animation: slide 20s infinite; }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -327,6 +342,17 @@ body {
 
 .navigation__button:hover .navigation__icon::after {
   top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
 
 .composition {
   position: relative; }

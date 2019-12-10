@@ -6,7 +6,7 @@ body{
   font-size: $default-font-size;
   line-height: 1.7;
   color:$color-grey-dark;
-  padding: 3rem;
+    padding:0;
 }
 .heading-primary{
   color:$color-white;
@@ -56,7 +56,7 @@ body{
   }
   &__invitation{
     color:$color-white;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-transform: initial;
   }  
 }

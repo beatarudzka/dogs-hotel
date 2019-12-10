@@ -1,3 +1,5 @@
+@import "../abstract/variables";
+
 @keyframes moveInLeft {
   0%{
     opacity:0;
@@ -22,5 +24,32 @@
   100%{
     opacity: 100%;
     transform: translate(0);
+  }
+}
+@keyframes slide{
+  0%{
+    background-image: linear-gradient(
+      to right,
+       rgba($color-black, .5), rgba($color-black, .6) ), url(/img/jenny-marvin.jpg);
+  }
+  25%{
+    background-image:linear-gradient(
+      to right,
+       rgba($color-black, .5), rgba($color-black, .6) ),  url(/img/julian-schiemann.jpg);
+  }
+  50%{
+    background-image: linear-gradient(
+      to right,
+       rgba($color-black, .5), rgba($color-black, .6) ), url(/img/camilo-fierro.jpg);
+  }
+  75%{
+    background-image: linear-gradient(
+      to right,
+       rgba($color-black, .5), rgba($color-black, .6) ), url(/img/img-1.jpg);
+  }
+  100%{
+    background-image: linear-gradient(
+      to right,
+       rgba($color-black, .5), rgba($color-black, .6) ), url(/img/meg-sanchez.jpg);
   }
 }
