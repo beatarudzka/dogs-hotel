@@ -76,13 +76,18 @@ body {
 .heading-secondary {
   font-size: 7.5rem;
   font-weight: 300;
-  display: inline-block;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
   color: #000;
   display: block; }
   .heading-secondary__testimonials {
     color: #000; }
+  .heading-secondary__paragraph {
+    font-size: 3.4vw;
+    padding: 0;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.1; }
 
 .heading-tertiary {
   font-size: 1.8rem;
@@ -104,6 +109,12 @@ body {
   color: #000; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
+  .paragraph__right {
+    position: relative;
+    font-size: 1.8rem;
+    color: #000;
+    margin: 4rem;
+    text-align: center; }
 
 .dark-big-span {
   color: #808080;
@@ -127,7 +138,7 @@ body {
 
 .section-info {
   background-color: #EBECF0;
-  height: 115vh;
+  height: 315vh;
   padding: 20rem 0;
   margin-top: -20vh; }
 
@@ -155,7 +166,8 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  animation: slide 30s infinite; }
+  animation: slide 30s infinite;
+  background-attachment: fixed; }
   .header__logo-box {
     position: absolute;
     top: 3.5rem;
@@ -357,28 +369,35 @@ body {
   top: 0;
   transform: rotate(-135deg); }
 
-.composition {
-  position: relative; }
-  .composition__photo {
-    width: 50%;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
-    position: absolute;
-    z-index: 10;
-    outline: 0.5rem solid #fff; }
-    .composition__photo--3 {
-      left: 0;
-      top: -2rem; }
-    .composition__photo--2 {
-      left: 18rem;
-      top: 6rem; }
-    .composition__photo--1 {
-      left: -5rem;
-      top: 25rem; }
-    .composition__photo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.6);
-      z-index: 20; }
+.info__composition {
+  position: relative;
+  background-color: #fff;
+  height: 70vh;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  width: 35vw;
+  top: 0;
+  right: 0;
+  transform: translate(90%, 10%);
+  margin-top: 5rem;
+  padding: 5rem;
+  z-index: 1000; }
+  .info__composition--card {
+    text-align: center;
+    padding: 0 7rem; }
+
+.composition__photo {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  text-align: end; }
+  .composition__photo--1 {
+    position: relative;
+    width: 100%;
+    margin: 8rem;
+    transform: translate(-90%, -10%);
+    z-index: 5;
+    background-attachment: fixed; }
 
 .feature-box {
   text-align: center;

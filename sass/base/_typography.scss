@@ -6,7 +6,7 @@ body{
   font-size: $default-font-size;
   line-height: 1.7;
   color:$color-grey-dark;
-    padding:0;
+  padding:0;
 }
 .heading-primary{
   color:$color-white;
@@ -34,7 +34,6 @@ body{
 .heading-secondary{
   font-size:7.5rem;
   font-weight: 300;
-  display:inline-block;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
   color:$color-black;
@@ -42,6 +41,13 @@ body{
 
   &__testimonials{
     color:$color-black
+  }
+  &__paragraph{
+    font-size:3.4vw;
+    padding: 0;
+    font-weight: 100;
+    text-align:center;
+    line-height: 1.1;
   }
 }
 .heading-tertiary{
@@ -68,6 +74,14 @@ body{
 
   &:not(:last-child){
     margin-bottom: 2rem;
+  }
+
+  &__right{
+    position:relative;
+    font-size: 1.8rem;
+    color:$color-black;
+    margin:4rem;
+    text-align:center;
   }
 }
 
