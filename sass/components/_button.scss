@@ -14,6 +14,7 @@
     color:$color-grey-dark;
     border: none;
     cursor:pointer;
+    z-index: 1000;
 
     &--red{
       background-color: $color-red-dark;
