@@ -1,12 +1,17 @@
 const composition = document.querySelector(".info__composition")
 const sections = document.querySelectorAll("section")
 
-const options = {}
+const options = {
+  root: null,
+  treshold: 1,
+  rootMargin: "-50px"
+
+}
 
 const observer = new IntersectionObserver(function (
   entries, observer) {
   entries.forEach(entry => {
-    console.log(entry)
+    entry.target.classList.toggle("inverse")
   })
 }, options)
 
