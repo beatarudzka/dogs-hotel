@@ -44,7 +44,6 @@
     box-shadow: 0 .5rem .5rem rgba($color-black, .2);
   }
   
-  
   &__photo{
     position: relative;
     padding: 0;
@@ -71,8 +70,7 @@
       width: 100%;
       top:50%;
       left: 50%;
-      transform: translate(-37.5%, -37.5%);
-      background-size: cover;
+      transform: translate(-47.5%, -37.5%);
       background-image: url(/img/bed-animal.jpg);
       overflow: hidden;
     }
@@ -87,6 +85,7 @@
       background-size: cover;
       background-image: url(/img/house-luxury.jpg);
       top:100%;
+      background-attachment: fixed;
     }
   }
 }

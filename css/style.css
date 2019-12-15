@@ -53,7 +53,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: #3a3636;
   padding: 0; }
 
 .heading-primary {
@@ -143,8 +143,8 @@ body {
   margin-bottom: 8rem; }
 
 .section-info {
-  background-color: #EBECF0;
-  height: 510vh;
+  background-color: #f1f1f1;
+  height: 500vh;
   padding: 20rem 0;
   margin-top: -20vh;
   z-index: -5; }
@@ -162,7 +162,7 @@ body {
 
 .section-reservation {
   padding: 6rem 0;
-  background-image: linear-gradient(#EBECF0);
+  background-image: linear-gradient(#f1f1f1);
   background-size: cover;
   height: 90vh; }
 
@@ -216,7 +216,9 @@ body {
   width: calc(2*((100% - 2* 6rem)/3) + 6rem); }
 
 .navigation__checkbox {
-  display: none; }
+  display: none;
+  height: 10rem;
+  width: 30rem; }
 
 .navigation__image {
   z-index: 1000;
@@ -377,6 +379,14 @@ body {
     top: -.8rem; }
   .navigation__icon::after {
     top: .8rem; }
+  .navigation__icon--contact, .navigation__icon--booking {
+    height: 10rem;
+    width: 10rem;
+    position: fixed;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent; }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
@@ -394,6 +404,23 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
+
+.menu {
+  z-index: 10;
+  top: 3.472vw;
+  right: 3.472vw;
+  height: 3.472vw;
+  position: fixed;
+  overflow: hidden; }
+  .menu__bar {
+    top: 0;
+    z-index: 2;
+    height: 5.833vw;
+    display: flex;
+    position: relative; }
+    .menu__bar--buttons {
+      display: block;
+      color: #fff; }
 
 .info__composition {
   position: relative;
@@ -646,7 +673,7 @@ body {
     .footer__newsletter--sign-up {
       cursor: pointer;
       text-decoration: none;
-      color: #EBECF0; }
+      color: #f1f1f1; }
   .footer__navigation {
     margin-left: 2rem;
     border-top: 1px solid #fff;
@@ -673,7 +700,7 @@ body {
   .footer__copyright {
     display: block;
     text-align: center;
-    color: #777;
+    color: #3a3636;
     padding-top: 1rem;
     font-size: 1.1rem; }
 
@@ -741,8 +768,7 @@ body {
       width: 100%;
       top: 50%;
       left: 50%;
-      transform: translate(-37.5%, -37.5%);
-      background-size: cover;
+      transform: translate(-47.5%, -37.5%);
       background-image: url(/img/bed-animal.jpg);
       overflow: hidden; }
     .composition__photo--3 {
@@ -754,7 +780,8 @@ body {
       width: 100%;
       background-size: cover;
       background-image: url(/img/house-luxury.jpg);
-      top: 100%; }
+      top: 100%;
+      background-attachment: fixed; }
 
 .span__red {
   width: 20%;
