@@ -83,7 +83,7 @@ body {
   .heading-secondary__testimonials {
     color: #000; }
   .heading-secondary__paragraph {
-    margin: 6rem 15rem 5rem 5rem;
+    margin: 3rem 15rem 2rem 5rem;
     font-size: 3.4vw;
     padding: 5rem;
     font-weight: 100;
@@ -567,22 +567,12 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   transition: all .2s;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   font-size: 1.6rem;
-  color: #777;
-  border: none;
+  color: #000;
   cursor: pointer;
   z-index: 1000; }
-  .btn--red, .btn:link--red, .btn:visited--red {
-    background-color: #e74c3c;
-    color: #fff; }
-    .btn--red::after, .btn:link--red::after, .btn:visited--red::after {
-      background-color: #fff; }
-  .btn:hover, .btn:link:hover, .btn:visited:hover {
-    transform: translateY(-0.3rem); }
-    .btn:hover::after, .btn:link:hover::after, .btn:visited:hover::after {
-      transform: scale(1.1);
-      opacity: 0; }
   .btn:active, .btn:focus, .btn:link:active, .btn:link:focus, .btn:visited:active, .btn:visited:focus {
     outline: none;
     transform: translateY(-1px);
@@ -616,6 +606,28 @@ body {
 .btn .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
+
+.btn__red {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  margin: 1.5rem 4rem;
+  background-color: #fff; }
+  .btn__red:hover {
+    color: #fff; }
+  .btn__red::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #e74c3c;
+    z-index: -1;
+    transition: .8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    color: #fff; }
+  .btn__red:hover::before {
+    height: 180%; }
 
 .footer {
   background-color: #111619;
@@ -668,7 +680,7 @@ body {
 .composition {
   width: 100%;
   position: relative;
-  padding: 30rem 0; }
+  padding: 15rem 0; }
   .composition__card--1 {
     position: absolute;
     text-align: center;
@@ -678,7 +690,7 @@ body {
     margin: 7rem 0;
     z-index: 500;
     background-color: #fff;
-    height: 70vh;
+    height: 80vh;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
     top: 0;
     right: 0;
@@ -692,18 +704,18 @@ body {
     margin: 7rem 0;
     z-index: 500;
     background-color: #fff;
-    height: 90vh;
+    height: 93vh;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
   .composition__card--3 {
     position: absolute;
     text-align: center;
     padding: 14rem 0;
     width: 90%;
+    height: 75vh;
     padding: 0;
-    margin: 24rem 0;
+    margin: 29rem 0;
     z-index: 500;
     background-color: #fff;
-    height: 60vh;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
   .composition__photo {
     position: relative;
@@ -722,7 +734,7 @@ body {
       z-index: 0;
       overflow: hidden; }
     .composition__photo--2 {
-      height: 95vh;
+      height: 100%;
       position: absolute;
       padding: 0;
       margin: 15rem 0;
@@ -731,7 +743,8 @@ body {
       left: 50%;
       transform: translate(-37.5%, -37.5%);
       background-size: cover;
-      background-image: url(/img/wade-austin-ellis.jpg); }
+      background-image: url(/img/bed-animal.jpg);
+      overflow: hidden; }
     .composition__photo--3 {
       height: 100vh;
       position: absolute;
@@ -740,4 +753,12 @@ body {
       margin: 15rem 0;
       width: 100%;
       background-size: cover;
-      background-image: url(/img/bath-clean.jpg); }
+      background-image: url(/img/house-luxury.jpg);
+      top: 100%; }
+
+.span__red {
+  width: 20%;
+  height: 2px;
+  background: #e74c3c;
+  display: block;
+  margin-top: 2rem; }
