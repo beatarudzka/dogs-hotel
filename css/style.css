@@ -1,3 +1,16 @@
+/*
+0 -600px Phone only
+600 - 900px Tablet portrait
+900 - 1200px Tablet landscape
+1200 - 1800 desktop
+1800px Big desktop
+*/
+/*
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 *,
 *::before,
 *::after {
@@ -10,6 +23,18 @@ html {
   font-size: 62.5%;
   padding: 0;
   margin: 0; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 120%; } }
 
 body {
   box-sizing: border-box;
@@ -142,6 +167,19 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+/*
+0 -600px Phone only
+600 - 900px Tablet portrait
+900 - 1200px Tablet landscape
+1200 - 1800 desktop
+1800px Big desktop
+*/
+/*
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 .section-info {
   background-color: #f1f1f1;
   height: 500vh;
@@ -468,8 +506,7 @@ body {
     transform: scaleX(1); }
 
 .navigation .nav__scrolled {
-  background-color: #fff;
-  transform: scaleY(100%); }
+  background-color: #fff; }
 
 .navigation .link__scrolled {
   color: #000; }

@@ -2,7 +2,9 @@ const menu = document.querySelector(".main-nav")
 const header = document.querySelector(".header")
 const navLinks = document.querySelectorAll(".nav__link")
 
-const sectionHeaderOptions = {}
+const sectionHeaderOptions = {
+  rootMargin: "-800px 0px 0px 0px"
+}
 
 const sectionHeaderObserver = new IntersectionObserver(function (
   entries,
