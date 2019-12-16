@@ -1,11 +1,18 @@
 .feature-box{
   text-align: center;
   box-shadow: 0 1.5rem 2rem rgba($color-black, 0.6);
-  font-size:1.5rem;
+  font-size:1.6rem;
   padding:.5rem;
   height: 55%;
   border-radius: 3px;
   background-color: $color-white;
+
+  @include respond(tab-land) {
+    font-size: 1.8rem;
+  }
+  @include respond(phone) {
+    font-size: 1.8rem;
+  }
 
   &__text{
     height: 40%;

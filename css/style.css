@@ -23,18 +23,18 @@ html {
   font-size: 62.5%;
   padding: 0;
   margin: 0; }
-  @media (max-width: 600px) {
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 900px) {
+  @media (max-width: 37.5em) {
     html {
-      font-size: 60%; } }
-  @media (max-width: 1200px) {
-    html {
-      font-size: 70%; } }
-  @media (min-width: 1800px) {
-    html {
-      font-size: 120%; } }
+      font-size: 40%; } }
 
 body {
   box-sizing: border-box;
@@ -89,12 +89,22 @@ body {
     font-weight: 600;
     animation: moveInLeft 1s ease-out;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        line-height: 1.1; } }
   .heading-primary--sub {
     display: block;
     font-size: 8rem;
     font-weight: 400;
     animation: moveInRight 1s ease-out;
     margin-bottom: 6rem; }
+    @media (max-width: 75em) {
+      .heading-primary--sub {
+        font-size: 6rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 5rem;
+        margin-bottom: 4rem; } }
   .heading-primary--description {
     font-weight: 200; }
 
@@ -105,8 +115,21 @@ body {
   margin-bottom: .5rem;
   color: #000;
   display: block; }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 6rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 5rem;
+      margin-bottom: .5rem; } }
   .heading-secondary__testimonials {
     color: #000; }
+    @media (max-width: 75em) {
+      .heading-secondary__testimonials {
+        font-size: 1.8rem; } }
+    @media (max-width: 37.5em) {
+      .heading-secondary__testimonials {
+        font-size: 1.8rem; } }
   .heading-secondary__paragraph {
     margin: 3rem 15rem 2rem 5rem;
     font-size: 3.4vw;
@@ -114,6 +137,13 @@ body {
     font-weight: 100;
     text-align: left;
     line-height: 1.1; }
+    @media (max-width: 75em) {
+      .heading-secondary__paragraph {
+        font-size: 4rem; } }
+    @media (max-width: 37.5em) {
+      .heading-secondary__paragraph {
+        font-size: 3rem;
+        margin-bottom: .5rem; } }
 
 .heading-tertiary {
   font-size: 1.8rem;
@@ -135,6 +165,13 @@ body {
   color: #000; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
+  @media (max-width: 75em) {
+    .paragraph {
+      font-size: 1.8rem; } }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      font-size: 1.8rem;
+      margin-bottom: .5rem; } }
   .paragraph__left {
     position: relative;
     font-size: 1.8rem;
@@ -146,6 +183,13 @@ body {
     font-size: 1.8rem; }
   .paragraph__column {
     color: #000; }
+    @media (max-width: 75em) {
+      .paragraph__column {
+        font-size: 1.8rem; } }
+    @media (max-width: 37.5em) {
+      .paragraph__column {
+        font-size: 1.8rem;
+        margin-bottom: .5rem; } }
 
 .dark-big-span {
   color: #808080;
@@ -238,8 +282,34 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+      @media (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+    @media (max-width: 37.5em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+    @media (max-width: 37.5em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 80rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 70rem; } }
 
 .col-1-of-2 {
   width: calc((100% - 6rem)/2); }
@@ -341,7 +411,7 @@ body {
 .navigation__logo-box {
   position: relative;
   display: inline-block;
-  width: 4.5rem;
+  width: 6.5rem;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -469,12 +539,12 @@ body {
   text-align: center;
   cursor: pointer;
   background-color: transparent;
-  transform: translate(-5.2%, -10.7%); }
+  transform: translate(13%, -10.7%); }
 
 .navigation .nav__list {
   list-style: none;
-  margin-top: 4.5rem;
-  margin-left: .5rem;
+  margin-top: 3.5rem;
+  margin-left: 1.5rem;
   padding: 0;
   display: flex;
   left: 100%; }
@@ -484,8 +554,8 @@ body {
   text-decoration: none;
   color: #fff;
   display: inline-block;
-  padding: 1rem 2rem .2rem 2rem;
-  margin-bottom: 3rem;
+  padding: 0 2rem .2rem 2rem;
+  margin-bottom: .5rem;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -501,7 +571,7 @@ body {
     height: 1px;
     background: #e74c3c;
     transform: scaleX(0);
-    transition: transform 150ms ease-in-out; }
+    transition: transform .4s ease-in-out; }
   .navigation .nav__link:hover::after {
     transform: scaleX(1); }
 
@@ -520,11 +590,17 @@ body {
 .feature-box {
   text-align: center;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.6);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   padding: .5rem;
   height: 55%;
   border-radius: 3px;
   background-color: #fff; }
+  @media (max-width: 75em) {
+    .feature-box {
+      font-size: 1.8rem; } }
+  @media (max-width: 37.5em) {
+    .feature-box {
+      font-size: 1.8rem; } }
   .feature-box__text {
     height: 40%;
     margin: 2rem;
@@ -800,8 +876,8 @@ body {
   .composition__card--1 {
     position: absolute;
     text-align: center;
-    padding: 0 7rem;
-    width: 41.5%;
+    padding: 7rem 0;
+    width: 37.5%;
     padding: 0;
     margin: 7rem 0;
     z-index: 500;
@@ -810,7 +886,7 @@ body {
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
     top: 0;
     right: 0;
-    transform: translate(-22%, 21%); }
+    transform: translate(-62%, 7.5%); }
   .composition__card--2 {
     position: absolute;
     text-align: center;
@@ -841,7 +917,7 @@ body {
     height: 100vh; }
     .composition__photo--1 {
       height: 30rem;
-      margin: 15rem 0;
+      margin: 5rem 0;
       top: 0;
       left: 20%;
       transform: translate(-33%, -12%);
