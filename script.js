@@ -1,21 +1,27 @@
-const composition = document.querySelector(".info__composition")
-const sections = document.querySelectorAll("section")
+const menu = document.querySelector(".main-nav")
+const header = document.querySelector(".header")
+const navLinks = document.querySelectorAll(".nav__link")
 
-const options = {
-  root: null,
-  treshold: 1,
-  rootMargin: "-50px"
+const sectionHeaderOptions = {}
 
-}
-
-const observer = new IntersectionObserver(function (
-  entries, observer) {
+const sectionHeaderObserver = new IntersectionObserver(function (
+  entries,
+  sectionHeaderObserver) {
   entries.forEach(entry => {
-    entry.target.classList.toggle("inverse")
+    if (!entry.isIntersecting) {
+      menu.classList.add("nav__scrolled")
+      navLinks.forEach(navLink => {
+        navLink.classList.add("link__scrolled")
+      })
+    } else {
+      menu.classList.remove("nav__scrolled")
+      navLinks.forEach(navLink => {
+        navLink.classList.remove("link__scrolled")
+      })
+    }
   })
-}, options)
+}, sectionHeaderOptions)
 
 
-sections.forEach(section => {
-  observer.observe(section)
-})
+
+sectionHeaderObserver.observe(header)

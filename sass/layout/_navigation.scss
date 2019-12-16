@@ -82,7 +82,7 @@
     text-align: center;
     cursor: pointer;
     background-color: $color-red-dark;
-    box-shadow: 0 .5rem .5rem rgba($color-black, .2);
+    box-shadow: 0 3px 20px rgba(black, 0.2);
   }
   &__bg{
     height: 9.5rem;
@@ -94,7 +94,6 @@
     transition: all .8s;
   }
   
- 
   &__nav{
     height: 100vh;
     position:fixed;
@@ -229,15 +228,13 @@
     transform: rotate(-135deg);
   }
   &__menu{
-    --text: #f4f4f4;
-    --text-inverse: #333;
-    --background: transparent;
-  
+    color: $color-white;
+    background-color: transparent;
     position: fixed;
-    top: 0;
+    top:0;
     left: 0;
     right: 0;
-    transform: translate(-11.7%, 2.5%);
+    transform: translate(-7.8%, 16.6%);
     z-index: 999;
     display: flex;
     justify-content: flex-end;
@@ -245,7 +242,20 @@
     padding: 2em 3em;
     transition: background 250ms ease-in;
     background: var(--background);
-    color: var(--text);
+
+  }
+
+  .main-nav{
+    height: 10rem;
+    width: 30rem;
+    position: fixed;
+    top:6rem;
+    right:6rem;
+    z-index:2000;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    transform: translate(-5.2%, -10.7%);
   }
   
   .nav__list {
@@ -255,6 +265,7 @@
     padding: 0;
     display: flex;
     left:100%;
+    
   }
   
   .nav__link {
@@ -262,11 +273,14 @@
     text-decoration: none;
     color: $color-white;
     display: inline-block;
-    padding: 2rem;
+    padding: 1rem 2rem .2rem 2rem;
+    margin-bottom: 3rem;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.2rem;
+    z-index: 1200;
+    text-align: center;
   
     &:after {
       content: "";
@@ -285,12 +299,11 @@
     }
   }
   
-  .nav-scrolled {
-    --text: #333;
-    --text-inverse: #f4f4f4;
-    --background: #f4f4f4;
-  
-    box-shadow: 0 3px 20px rgba(black, 0.2);
+  .nav__scrolled {
+    background-color: $color-white;
+    transform: scaleY(100%);
   }
-
+  .link__scrolled {
+    color:$color-black;
+  }
 }
