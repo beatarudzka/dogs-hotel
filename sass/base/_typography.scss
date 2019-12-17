@@ -146,5 +146,9 @@ body{
 .dark-big-span{
   color:$color-grey-light-2;
   font-size: 4.5rem;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 

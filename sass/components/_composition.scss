@@ -17,6 +17,14 @@
     top:0;
     right:0;
     transform: translate(-62%, 7.5%);
+    
+    // @include respond(tab-port) {
+    //  width:100%;
+    // }
+    // @include respond(phone) {
+    //  width:100%;
+    //  transform: translate(-50%, -50%);
+    // }
   }
   &__card--2{
     position: absolute;

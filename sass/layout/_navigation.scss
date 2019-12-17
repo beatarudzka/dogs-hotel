@@ -9,19 +9,70 @@
     z-index: 1000;
     top:0;
     left:0;
-    width:100%;
+    width:100vw;
     position: absolute;
-    filter: grayscale(100%) brightness(20%);
-    will-change: transform;
-    
+    filter: grayscale(80%) brightness(20%);
+    box-sizing: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @include respond(tab-land) {
+      right:0;
+      bottom:0;
+      top:0;
+      left:0;
+      width:100vw;
+    }
+    @include respond(tab-port) {
+      right:0;
+      bottom:0;
+      top:0;
+      left:0;
+      height: 150vh;
+      width:100vw;
+    }
+    @include respond(phone) {
+      top:0;
+      left:0;
+      height:100%;
+      width:100vw;
+    }
 
     &--photo{
       top:0;
       left:0;
-      width:100%;
-      left:100%;
+      height:100%;
+      width:100vw;
       object-fit: cover;
-      background-color: rgba($color-grey-dark-3, 0.96);
+      background-color: rgba($color-grey-dark-2, 0.96);
+
+      @include respond(tab-land) {
+        top:0;
+        right:0;
+        bottom:0;
+        position: absolute;
+        height:160%;
+      }      
+      @include respond(tab-port) {
+        top:0;
+        right:0;
+        bottom:0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height:120%;
+        box-sizing: inherit;
+      }
+      @include respond(phone) {
+        top:0;
+        right:0;
+        bottom:0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height:100%;
+        width: 100%;
+        box-sizing: inherit;
+      }
+
     }
   }
 
@@ -30,14 +81,59 @@
     padding: 2rem 0;
     bottom:10%;
     position: absolute;
-    transform: translate(90%, 50%);
+    transform: translate(0%, 50%);
     list-style: none;
     z-index: 1500;
+
+    @include respond(tab-land) {
+      position: absolute;
+      margin-top:5rem;
+      padding-top: 8rem;
+      transform: translate(38.5%, 50%);
+    }      
+    @include respond(tab-port) {
+      position: absolute;
+      margin-top:5rem;
+      padding-top: 8rem;
+      transform: translate(12.5%, 50%);
+    }
+    @include respond(phone) {
+      position: absolute;
+      margin-top:5rem;
+      padding-top: 8rem;
+    }
 
     &--item{
       display: inline-block;
       padding: 2rem;
       color: $color-grey-light-2;
+      @include respond(tab-land) {
+        display:inline-block;
+        padding:1rem 2rem;
+        text-align: center;
+        line-height: .9;
+        bottom: 0;
+        font-size: 1.2rem;
+        position: relative;
+      }      
+      @include respond(tab-port) {
+        display:inline-block;
+        padding:1rem 2rem;
+        text-align: center;
+        line-height: .9;
+        bottom: 0;
+        font-size: 1.2rem;
+        position: relative;
+      }
+      @include respond(phone) {
+        display:inline-block;
+        padding:1rem 2rem;
+        text-align:start;
+        line-height: .9;
+        bottom: 0;
+        font-size: 1.2rem;
+        position: relative;
+      }
     }
 
     &--link{
@@ -49,6 +145,14 @@
         text-decoration: none;
         cursor: pointer;
         color: $color-grey-light-2;
+    
+        @include respond(tab-port) {
+          color: $color-grey-light-1;
+          font-size: 2.5rem;
+        }
+        @include respond(phone) {
+          color: $color-grey-light-1;
+        }
       }
       &:hover,
       &:active{
@@ -83,6 +187,25 @@
     cursor: pointer;
     background-color: $color-red-dark;
     box-shadow: 0 3px 20px rgba(black, 0.2);
+
+    @include respond(tab-land) {
+      top:3rem;
+      right:3rem;
+      height: 6rem;
+      width: 6rem;
+    }      
+    @include respond(tab-port) {
+      top:3rem;
+      right:3rem;
+      height: 8rem;
+      width: 8rem;
+    }
+    @include respond(phone) {
+      top:4.5rem;
+      right:3rem;
+      height: 6.5rem;
+      width: 6.5rem;
+    }
   }
   &__bg{
     height: 9.5rem;
@@ -92,6 +215,25 @@
     right:6.5rem;
     z-index:500;
     transition: all .8s;
+
+    @include respond(tab-land) {
+      top:3rem;
+      right:3rem;
+      height: 6rem;
+      width: 6rem;
+    }      
+    @include respond(tab-port) {
+      top:3rem;
+      right:3rem;
+      height: 6rem;
+      width: 6rem;
+    }
+    @include respond(phone) {
+      top:3rem;
+      right:3rem;
+      height: 6rem;
+      width: 6rem;
+    }
   }
   
   &__nav{
@@ -102,22 +244,38 @@
     z-index: 1500;
     opacity:0;
     width: 0;
+
+    @include respond(phone) {
+      width: 4.5rem;
+      padding: 3rem;
+    }
   }
   &__logo-box{
-    position:relative;
+    position: absolute;
     display:inline-block;
-    width: 6.5rem;
+    width: 8.5rem;
     top:10%;
     left:50%;
     transform:translate(-50%, -50%);
     transition: opacity;
     z-index: 1500;
+
+    @include respond(phone) {
+      display: block;
+      margin-bottom: 4rem;
+      width: 8.5rem;
+    }
   }
 
   &__logo{
     width: 8.5rem;
     text-align: center;
     padding-top: 3rem;
+
+    @include respond(phone) {
+      width: 6.5rem;
+      padding-bottom: 3rem;
+    }
   }
   &__list{
     position: absolute;
@@ -127,10 +285,36 @@
     list-style: none;
     text-align: center;
     z-index: 1500;
+
+    @include respond(tab-land) {
+     
+    }      
+    @include respond(tab-port) {
+     
+    }
+    @include respond(phone) {
+      display: block;
+      margin:1rem;
+      left:30%;
+      text-align: justify;
+
+    }
   }
   &__item{
     display: inline-block;
     padding: 1rem;
+
+    @include respond(tab-land) {
+     
+    }      
+    @include respond(tab-port) {
+     
+    }
+    @include respond(phone) {
+      display: block;
+      padding: 0;
+      margin:0.5rem;
+    }
   }
   &__link{
     &:link,
@@ -141,6 +325,19 @@
       text-decoration: none;
       cursor: pointer;
       color: $color-white;
+
+      @include respond(tab-land) {
+     
+      }      
+      @include respond(tab-port) {
+       
+      }
+      @include respond(phone) {
+        margin-top: 1rem;
+        font-size: 4rem;
+        margin:.5rem;
+        font-weight: 200;
+      }
     }
     &:hover,
     &:active{
@@ -163,19 +360,25 @@
     }
   }
   &__checkbox:checked ~ &__bg{
-   transform: scale(80);
+   transform: scaleY(150);
 
   }
 
   &__checkbox:checked ~ &__nav{
     opacity:1;
     width: 100%;
+    height: 100%;
   }
   &__icon{
     position: relative;
     margin-top:4.5rem;
     margin-left:.5rem;
     z-index: 1500;
+
+    @include respond(phone) {
+      margin-top:3rem;
+      margin-left:0;
+    }
     
     &,
     &::before,
@@ -184,6 +387,12 @@
       height: 2px;
       background-color: $color-white;
       display:inline-block;
+
+      @include respond(phone) {
+        width: 3rem;
+        height: 1px;
+      }
+      
     }
     &::before,
     &::after{
@@ -194,9 +403,18 @@
     }
     &::before{
       top:-.8rem;
+
+      @include respond(phone) {
+        top:1rem;
+      }
+      
     }
     &::after{
       top:.8rem;
+
+      @include respond(phone) {
+        top:1.9rem;
+      }
     }
     &--contact,
     &--booking{
@@ -211,10 +429,30 @@
   }
   &__button:hover &__icon::before{
     top:-1rem;
+
+    @include respond(tab-land) {
+      top:3rem;
+    }      
+    @include respond(tab-port) {
+      top:3rem;
+    }
+    @include respond(phone) {
+      top:-8rem;
+    }
   }
 
   &__button:hover &__icon::after{
     top: 1rem;
+
+    @include respond(tab-land) {
+      top:3rem;
+    }      
+    @include respond(tab-port) {
+      top:3rem;
+    }
+    @include respond(phone) {
+      top:-10rem;
+    }
   }
   &__checkbox:checked + &__button &__icon{
     background-color: transparent;
