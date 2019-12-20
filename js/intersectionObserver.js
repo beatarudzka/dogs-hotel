@@ -1,6 +1,6 @@
-const menu = document.querySelector(".menu__nav")
+const menu = document.querySelector(".menu__list")
 const header = document.querySelector(".header")
-const navLinks = document.querySelectorAll(".menu__nav--link")
+const navLinks = document.querySelectorAll(".menu__link")
 
 const sectionHeaderOptions = {
   rootMargin: "-800px 0px 0px 0px"
@@ -27,3 +27,5 @@ const sectionHeaderObserver = new IntersectionObserver(function (
 
 
 sectionHeaderObserver.observe(header)
+
+

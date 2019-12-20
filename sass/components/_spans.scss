@@ -7,9 +7,52 @@
 }
 
 .span__white{
-  width: 100%;
-  height: 2px;
-  background: $color-white;
-  display:block;
-  margin-top: 2rem;
+  @include respond(phone-big) {
+    width: 100%;
+    height: 2px;
+    background: $color-white;
+    display:block;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    left:0;
+    top:0;
+    margin: 2rem 0;
+   }
+  @include respond(phone) {
+    width: 100%;
+    height: 2px;
+    background: $color-white;
+    display:block;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    left:0;
+    top:0;
+    margin: 2rem 0;
+   }
+}
+
+.dark-big-span{
+  color:$color-grey-light-2;
+  font-size: 4.5rem;
+
+  @include respond(tab-land) {
+    color:$color-grey-light-1;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-right:1rem;
+    }
+  @include respond(tab-port) {
+    color:$color-grey-light-1;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-right:1rem;
+    }
+  @include respond(phone-big) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: none;
+  }
 }

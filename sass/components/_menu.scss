@@ -4,33 +4,50 @@
   top:0;
   left: 0;
   right: 0;
-  transform: translate(-7.8%, 16.6%);
+  transform: translate(0%, 16.6%);
   z-index: 999;
   display: flex;
   justify-content: flex-end;
-
   padding: 2em 4rem;
   margin: 0 3rem;
   transition: background 250ms ease-in;
-  background: var(--background);
 
-  &__nav{
-    &--list{
+    &__list{
       list-style: none;
-      margin-top:3.5rem;
-      margin-left:1.5rem;
       padding: 0;
       display:flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      width: 30rem;
+      height:10rem;
 
-      &-item{
+      @include respond(tab-land) {
+        width: 40rem;
+        height:6rem;
+      }
+      @include respond(tab-port) {
+        height:6rem;
+      }
+      @include respond(phone-big) {
+        display:none;
+      }
+      @include respond(phone) {
+        display:none;
+      }
+      &--item{
         top:0;
         right:0;
+
+        @include respond(phone) {
+          display:none;
+        }
+        @include respond(phone-big) {
+          display:none;
+        }
       }
     }
 
-    &--link{
+    &__link{
     --spacing: 1em;
     text-decoration: none;
     color: $color-white;
@@ -43,6 +60,9 @@
     font-size: 1.2rem;
     z-index: 1200;
     text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 
 
   &:after {
@@ -62,17 +82,51 @@
   }
     }
   }
-}
 
 .toggle-btn{
+  width: 10rem;
+  height: 10rem;
+  background-color: $color-red-dark;
+  z-index:2000;
+
+  @include respond(phone-big) {
+    background-color: transparent;
+    top:0;
+    right:0;
+    transform: translate(80%, -50%);
+  }
+  @include respond(phone) {
+    background-color: transparent;
+    top:0;
+    right:0;
+    transform: translate(80%, -50%);
+  }
 
   &__span{
   
     &--one{
-  
+      position: absolute;
+      width: 4rem;
+      height:2px;
+      background: $color-white;
+      margin-top: 4rem;
+      margin-left: 3rem;
     }
     &--two{
-  
+      position: absolute;
+      width: 4rem;
+      height:2px;
+      background: $color-white;
+      margin-top: 5rem;
+      margin-left: 3rem;
+    }
+    &--three{
+      position: absolute;
+      width: 4rem;
+      height:2px;
+      background: $color-white;
+      margin-top: 6rem;
+      margin-left: 3rem;
     }
   }
 }
