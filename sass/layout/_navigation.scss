@@ -1,79 +1,189 @@
 .navigation{
-  &__checkbox{
-    display: none;
-    height: 10rem;
-    width: 30rem;
-  }
 
-  &__box{
-    width: 100vw;
-    height: 130vh;
-    position: relative;
-  }
-
-  &__image{
-    z-index: 1000;
-    top:0;
-    left:0;
-    right: 0;
-    width:100%;
-    height: 100%;
+  &__logo--box{
     position: absolute;
-    filter: grayscale(80%) brightness(20%);
-    box-sizing: inherit;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    display:inline-block;
+    width: 8.5rem;
+    top:10%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition: opacity;
+    z-index:2000;
 
-    @include respond(tab-land) {
-
+    @include respond(phone) {
+      display: block;
+      margin-bottom: 4rem;
+      width: 8.5rem;
     }
+  }
+
+  &__logo{
+    width: 8.5rem;
+    text-align: center;
+    padding-top: 3rem;
+
     @include respond(tab-port) {
-
+      width: 6.5rem;
+      padding-bottom: 3rem;
+      margin-top: 3rem;
     }
 
+    @include respond(phone-big) {
+      display: block;
+      width: 6.5rem;
+      margin: 3rem;
+    }
+
+    @include respond(phone) {
+      width: 6.5rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &__nav{
+    background-color: url(/img/img-1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+  }
+  &__list{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    z-index:2000;
+    @include respond(tab-land) {
+     
+    }      
+    @include respond(tab-port) {
+     
+    }
     @include respond(phone-big) {
 
     }
     @include respond(phone) {
-
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
     }
+  }
+  &__item{
+    display: inline-block;
+    padding: 1rem;
 
-    &--photo{
-      top:0;
-      left:0;
-      height:100vh;
-      width:100vw;
-      object-fit: cover;
-      overflow-y: scroll;
-      overflow-x: hidden;
+    @include respond(tab-land) {
+     
+    }      
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      padding:.5rem;
+    }
+    @include respond(phone) {
+      display: block;
+      padding: 0;
+      margin:0.5rem;
+    }
+  }
+  &__link{
+    &:link,
+    &:visited{
+      position: relative;
+      font-size: 5rem;
+      font-weight: 300;
+      text-decoration: none;
+      cursor: pointer;
+      color: $color-white;
+       z-index:2000;
 
       @include respond(tab-land) {
-        top:0;
-        right:0;
-        bottom:0;
-        position: absolute;
-        height:160%;
+     
       }      
       @include respond(tab-port) {
-        top:0;
-        right:0;
-        bottom:0;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        height:120%;
-        box-sizing: inherit;
+        font-size: 3rem;
       }
       @include respond(phone) {
-        top:0;
-        right:0;
-        bottom:0;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        height:150%;
-        width: 100vw;
-        box-sizing: inherit;
+        margin-top: 1rem;
+        font-size: 4rem;
+        margin:.5rem;
+        font-weight: 200;
       }
+    }
+    &:hover,
+    &:active{
+      text-decoration: none;
+    }
+    &::after{
+      border-radius: 1rem;
+      border-top: .2rem solid $color-red-dark;
+      content:"";
+      position: absolute;
+      right:100%;
+      bottom:.24rem;
+      left:0;
+      transition: right .4s cubic-bezier(0,.5,0,1),
+                  border-color .4s ease-out;
+    }
+    &:hover::after{
+      right:0;
+      border-color: $color-red-dark;
+    }
+  }
+  &__icon{
+    position: relative;
+    margin-top:4.5rem;
+    margin-left:.5rem;
+    z-index: 1500;
 
+    @include respond(phone) {
+      margin-top:3rem;
+      margin-left:0;
+    }
+    
+    &,
+    &::before,
+    &::after{
+      width: 4rem;
+      height: 2px;
+      background-color: $color-white;
+      display:inline-block;
+
+      @include respond(phone) {
+        width: 3rem;
+        height: 1px;
+      }
+      
+    }
+    &::before,
+    &::after{
+      content:"";
+      position: absolute;
+      left:0;
+      transition: all .2s;
+    }
+    &::before{
+      top:-.8rem;
+
+      @include respond(phone) {
+        top:1rem;
+      }
+      
+    }
+    &::after{
+      top:.8rem;
+
+      @include respond(phone) {
+        top:1.9rem;
+      }
+    }
+    &--contact,
+    &--booking{
+      height: 10rem;
+      width: 10rem;
+      position: fixed;
+      z-index:2000;
+      text-align: center;
+      cursor: pointer;
+      background-color: transparent;
     }
   }
 
@@ -187,401 +297,7 @@
     }
   }
 
-  &__button{
-    height: 10rem;
-    width: 10rem;
-    position: fixed;
-    top:6rem;
-    right:6rem;
-    z-index:2000;
-    text-align: center;
-    cursor: pointer;
-    background-color: $color-red-dark;
-    box-shadow: 0 3px 20px rgba(black, 0.2);
-
-    @include respond(tab-land) {
-      top:3rem;
-      right:3rem;
-      height: 6rem;
-      width: 6rem;
-    }      
-    @include respond(tab-port) {
-      top:3rem;
-      right:3rem;
-      height: 8rem;
-      width: 8rem;
-    }
-    @include respond(phone) {
-      top:4.5rem;
-      right:3rem;
-      height: 6.5rem;
-      width: 6.5rem;
-    }
-  }
-  &__bg{
-    height: 9.5rem;
-    width: 9.5rem;
-    position: fixed;
-    top:6.5rem;
-    right:6.5rem;
-    z-index:500;
-    transition: all .8s;
-
-    @include respond(tab-land) {
-      top:3rem;
-      right:3rem;
-      height: 6rem;
-      width: 6rem;
-    }      
-    @include respond(tab-port) {
-      top:3rem;
-      right:3rem;
-      height: 6rem;
-      width: 6rem;
-    }
-    @include respond(phone) {
-      top:3rem;
-      right:3rem;
-      height: 6rem;
-      width: 6rem;
-    }
-  }
   
-  &__nav{
-    height: 100vh;
-    position:fixed;
-    top:0;
-    right:0;
-    z-index: 1500;
-    opacity:0;
-    width: 0;
 
-    @include respond(phone) {
-      width: 4.5rem;
-      padding: 3rem;
-      height: 130vh;
-    }
-  }
-  &__logo--box{
-    position: absolute;
-    display:inline-block;
-    width: 8.5rem;
-    top:10%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    transition: opacity;
-    z-index:2000;
-
-    @include respond(phone) {
-      display: block;
-      margin-bottom: 4rem;
-      width: 8.5rem;
-    }
-  }
-
-  &__logo{
-    width: 8.5rem;
-    text-align: center;
-    padding-top: 3rem;
-
-    @include respond(tab-port) {
-      width: 6.5rem;
-      padding-bottom: 3rem;
-      margin-top: 3rem;
-    }
-
-    @include respond(phone-big) {
-      display: block;
-      width: 6.5rem;
-      margin: 3rem;
-    }
-
-    @include respond(phone) {
-      width: 6.5rem;
-      margin-top: 3rem;
-    }
-  }
-  &__list{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-    z-index:2000;
-    @include respond(tab-land) {
-     
-    }      
-    @include respond(tab-port) {
-     
-    }
-    @include respond(phone-big) {
-
-    }
-    @include respond(phone) {
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-  &__item{
-    display: inline-block;
-    padding: 1rem;
-
-    @include respond(tab-land) {
-     
-    }      
-    @include respond(tab-port) {
-      font-size: 1.2rem;
-      padding:.5rem;
-    }
-    @include respond(phone) {
-      display: block;
-      padding: 0;
-      margin:0.5rem;
-    }
-  }
-  &__link{
-    &:link,
-    &:visited{
-      position: relative;
-      font-size: 5rem;
-      font-weight: 300;
-      text-decoration: none;
-      cursor: pointer;
-      color: $color-white;
-       z-index:2000;
-
-      @include respond(tab-land) {
-     
-      }      
-      @include respond(tab-port) {
-        font-size: 3rem;
-      }
-      @include respond(phone) {
-        margin-top: 1rem;
-        font-size: 4rem;
-        margin:.5rem;
-        font-weight: 200;
-      }
-    }
-    &:hover,
-    &:active{
-      text-decoration: none;
-    }
-    &::after{
-      border-radius: 1rem;
-      border-top: .2rem solid $color-red-dark;
-      content:"";
-      position: absolute;
-      right:100%;
-      bottom:.24rem;
-      left:0;
-      transition: right .4s cubic-bezier(0,.5,0,1),
-                  border-color .4s ease-out;
-    }
-    &:hover::after{
-      right:0;
-      border-color: $color-red-dark;
-    }
-  }
-  &__checkbox:checked ~ &__bg{
-   transform: scaleY(150);
-  }
-
-  &__checkbox:checked ~ &__nav{
-    opacity:1;
-    width: 100vw;
-    height: 130vh;
-  }
-  &__icon{
-    position: relative;
-    margin-top:4.5rem;
-    margin-left:.5rem;
-    z-index: 1500;
-
-    @include respond(phone) {
-      margin-top:3rem;
-      margin-left:0;
-    }
-    
-    &,
-    &::before,
-    &::after{
-      width: 4rem;
-      height: 2px;
-      background-color: $color-white;
-      display:inline-block;
-
-      @include respond(phone) {
-        width: 3rem;
-        height: 1px;
-      }
-      
-    }
-    &::before,
-    &::after{
-      content:"";
-      position: absolute;
-      left:0;
-      transition: all .2s;
-    }
-    &::before{
-      top:-.8rem;
-
-      @include respond(phone) {
-        top:1rem;
-      }
-      
-    }
-    &::after{
-      top:.8rem;
-
-      @include respond(phone) {
-        top:1.9rem;
-      }
-    }
-    &--contact,
-    &--booking{
-      height: 10rem;
-      width: 10rem;
-      position: fixed;
-      z-index:2000;
-      text-align: center;
-      cursor: pointer;
-      background-color: transparent;
-    }
-  }
-  &__button:hover &__icon::before{
-    top:-1rem;
-
-    @include respond(tab-land) {
-      top:3rem;
-    }      
-    @include respond(tab-port) {
-      top:3rem;
-    }
-    @include respond(phone) {
-      top:-8rem;
-    }
-  }
-
-  &__button:hover &__icon::after{
-    top: 1rem;
-
-    @include respond(tab-land) {
-      top:3rem;
-    }      
-    @include respond(tab-port) {
-      top:3rem;
-    }
-    @include respond(phone) {
-      top:-10rem;
-    }
-  }
-  &__checkbox:checked + &__button &__icon{
-    background-color: transparent;
-  }
-  &__checkbox:checked + &__button &__icon::before{
-    top:0;
-    transform: rotate(135deg);
-  }
-  &__checkbox:checked + &__button &__icon::after{
-    top:0;
-    transform: rotate(-135deg);
-  }
-  &__menu{
-    color: $color-white;
-    background-color: transparent;
-    position: fixed;
-    top:0;
-    left: 0;
-    right: 0;
-    transform: translate(-7.8%, 16.6%);
-    z-index: 999;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2em 4rem;
-    margin: 0 3rem;
-    transition: background 250ms ease-in;
-    background: var(--background);
-
-    @include respond(tab-land) {
-      display: none;
-    }
-    @include respond(tab-port) {
-      display: none;
-    }
-
-    @include respond(phone-big) {
-      display: none;
-    }
-
-    @include respond(phone) {
-      display: none;
-    }
-  }
-
-  .main-nav{
-    height: 10rem;
-    width: 30rem;
-    position: fixed;
-    top:6rem;
-    right:6rem;
-    z-index:2000;
-    text-align: center;
-    cursor: pointer;
-    background-color: transparent;
-    transform: translate(13%, -10.7%);
-  }
-  
-  .nav__list {
-    list-style: none;
-    margin-top:3.5rem;
-    margin-left:1.5rem;
-    padding: 0;
-    display: flex;
-    left:100%;
-    
-  }
-  
-  .nav__link {
-    --spacing: 1em;
-    text-decoration: none;
-    color: $color-white;
-    display: inline-block;
-    padding: 0 2rem .2rem 2rem;
-    margin-bottom: .5rem;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    z-index: 1200;
-    text-align: center;
-  
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: var(--spacing);
-      right: var(--spacing);
-      height: 1px;
-      background: $color-red-dark;
-      transform: scaleX(0);
-      transition: transform .4s ease-in-out;
-    }
-  
-    &:hover::after {
-      transform: scaleX(1);
-    }
-  }
-  
-  .nav__scrolled {
-    background-color: $color-white;
-  }
-  .link__scrolled {
-    color:$color-black;
-  }
 }
 

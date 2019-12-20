@@ -1,6 +1,6 @@
-const menu = document.querySelector(".main-nav")
+const menu = document.querySelector(".menu__nav")
 const header = document.querySelector(".header")
-const navLinks = document.querySelectorAll(".nav__link")
+const navLinks = document.querySelectorAll(".menu__nav--link")
 
 const sectionHeaderOptions = {
   rootMargin: "-800px 0px 0px 0px"

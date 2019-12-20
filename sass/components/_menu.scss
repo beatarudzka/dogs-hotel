@@ -1,0 +1,86 @@
+.menu{
+  background-color: transparent;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  transform: translate(-7.8%, 16.6%);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 2em 4rem;
+  margin: 0 3rem;
+  transition: background 250ms ease-in;
+  background: var(--background);
+
+  &__nav{
+    &--list{
+      list-style: none;
+      margin-top:3.5rem;
+      margin-left:1.5rem;
+      padding: 0;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      &-item{
+        top:0;
+        right:0;
+      }
+    }
+
+    &--link{
+    --spacing: 1em;
+    text-decoration: none;
+    color: $color-white;
+    display: inline-block;
+    padding: 0 2rem .2rem 2rem;
+    margin-bottom: .5rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    z-index: 1200;
+    text-align: center;
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 1px;
+    background: $color-red-dark;
+    transform: scaleX(0);
+    transition: transform .4s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+    }
+  }
+}
+
+.toggle-btn{
+
+  &__span{
+  
+    &--one{
+  
+    }
+    &--two{
+  
+    }
+  }
+}
+
+
+.nav__scrolled {
+  background-color: $color-white;
+}
+.link__scrolled {
+  color:$color-black;
+}
