@@ -5,11 +5,19 @@
     width: 30rem;
   }
 
+  &__box{
+    width: 100vw;
+    height: 130vh;
+    position: relative;
+  }
+
   &__image{
     z-index: 1000;
     top:0;
     left:0;
-    width:100vw;
+    right: 0;
+    width:100%;
+    height: 100%;
     position: absolute;
     filter: grayscale(80%) brightness(20%);
     box-sizing: inherit;
@@ -17,34 +25,27 @@
     overflow-x: hidden;
 
     @include respond(tab-land) {
-      right:0;
-      bottom:0;
-      top:0;
-      left:0;
-      width:100vw;
+
     }
     @include respond(tab-port) {
-      right:0;
-      bottom:0;
-      top:0;
-      left:0;
-      height: 150vh;
-      width:100vw;
+
+    }
+
+    @include respond(phone-big) {
+
     }
     @include respond(phone) {
-      top:0;
-      left:0;
-      height:100%;
-      width:100vw;
+
     }
 
     &--photo{
       top:0;
       left:0;
-      height:100%;
+      height:100vh;
       width:100vw;
       object-fit: cover;
-      background-color: rgba($color-grey-dark-2, 0.96);
+      overflow-y: scroll;
+      overflow-x: hidden;
 
       @include respond(tab-land) {
         top:0;
@@ -68,8 +69,8 @@
         bottom:0;
         overflow-x: hidden;
         overflow-y: scroll;
-        height:100%;
-        width: 100%;
+        height:150%;
+        width: 100vw;
         box-sizing: inherit;
       }
 
@@ -78,53 +79,62 @@
 
   &__footer{
     color:$color-grey-light-2;
-    padding: 2rem 0;
+    padding: 1.8rem 0;
     bottom:10%;
-    position: absolute;
-    transform: translate(0%, 50%);
+    position: fixed;
+    transform: translate(-50%, 100%);
+    left:50%;
     list-style: none;
-    z-index: 1500;
-
-    @include respond(tab-land) {
-      position: absolute;
-      margin-top:5rem;
-      padding-top: 8rem;
-      transform: translate(38.5%, 50%);
-    }      
-    @include respond(tab-port) {
-      position: absolute;
-      margin-top:5rem;
-      padding-top: 8rem;
-      transform: translate(12.5%, 50%);
+    z-index:2000;
+    
+   
+    // @include respond(tab-land) {
+    //   margin-top:5rem;
+    //   padding-top: 8rem;
+    //   transform: translate(38.5%, 50%);
+    // }      
+    // @include respond(tab-port) {
+    //   margin-top:5rem;
+    //   padding-top: 5rem;
+    //   padding-bottom: 3rem;
+    //   transform: translate(12.5%, 50%);
+    // }
+    @include respond(phone-big) {
+     
     }
+
     @include respond(phone) {
-      position: absolute;
-      margin-top:5rem;
-      padding-top: 8rem;
+      display:block;
+      width: 100%;
+      position: relative;
+      height:40vh;
+      bottom: 0;
+      transform: translate(-50%, 50%);
     }
 
     &--item{
       display: inline-block;
       padding: 2rem;
       color: $color-grey-light-2;
-      @include respond(tab-land) {
-        display:inline-block;
-        padding:1rem 2rem;
-        text-align: center;
-        line-height: .9;
-        bottom: 0;
-        font-size: 1.2rem;
-        position: relative;
-      }      
-      @include respond(tab-port) {
-        display:inline-block;
-        padding:1rem 2rem;
-        text-align: center;
-        line-height: .9;
-        bottom: 0;
-        font-size: 1.2rem;
-        position: relative;
-      }
+      z-index:2000;
+      // @include respond(tab-land) {
+      //   display:inline-block;
+      //   padding:1rem 2rem;
+      //   text-align: center;
+      //   line-height: .9;
+      //   bottom: 0;
+      //   font-size: 1.2rem;
+      //   position: relative;
+      // }      
+      // @include respond(tab-port) {
+      //   display:inline-block;
+      //   padding:1rem 2rem;
+      //   text-align: center;
+      //   line-height: .9;
+      //   bottom: 0;
+      //   font-size: 1.2rem;
+      //   position: relative;
+      // }
       @include respond(phone) {
         display:inline-block;
         padding:1rem 2rem;
@@ -145,10 +155,11 @@
         text-decoration: none;
         cursor: pointer;
         color: $color-grey-light-2;
+        
     
         @include respond(tab-port) {
           color: $color-grey-light-1;
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
         @include respond(phone) {
           color: $color-grey-light-1;
@@ -248,9 +259,10 @@
     @include respond(phone) {
       width: 4.5rem;
       padding: 3rem;
+      height: 130vh;
     }
   }
-  &__logo-box{
+  &__logo--box{
     position: absolute;
     display:inline-block;
     width: 8.5rem;
@@ -258,7 +270,7 @@
     left:50%;
     transform:translate(-50%, -50%);
     transition: opacity;
-    z-index: 1500;
+    z-index:2000;
 
     @include respond(phone) {
       display: block;
@@ -272,9 +284,21 @@
     text-align: center;
     padding-top: 3rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       width: 6.5rem;
       padding-bottom: 3rem;
+      margin-top: 3rem;
+    }
+
+    @include respond(phone-big) {
+      display: block;
+      width: 6.5rem;
+      margin: 3rem;
+    }
+
+    @include respond(phone) {
+      width: 6.5rem;
+      margin-top: 3rem;
     }
   }
   &__list{
@@ -284,20 +308,20 @@
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
-    z-index: 1500;
-
+    z-index:2000;
     @include respond(tab-land) {
      
     }      
     @include respond(tab-port) {
      
     }
-    @include respond(phone) {
-      display: block;
-      margin:1rem;
-      left:30%;
-      text-align: justify;
+    @include respond(phone-big) {
 
+    }
+    @include respond(phone) {
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
     }
   }
   &__item{
@@ -308,7 +332,8 @@
      
     }      
     @include respond(tab-port) {
-     
+      font-size: 1.2rem;
+      padding:.5rem;
     }
     @include respond(phone) {
       display: block;
@@ -325,12 +350,13 @@
       text-decoration: none;
       cursor: pointer;
       color: $color-white;
+       z-index:2000;
 
       @include respond(tab-land) {
      
       }      
       @include respond(tab-port) {
-       
+        font-size: 3rem;
       }
       @include respond(phone) {
         margin-top: 1rem;
@@ -361,13 +387,12 @@
   }
   &__checkbox:checked ~ &__bg{
    transform: scaleY(150);
-
   }
 
   &__checkbox:checked ~ &__nav{
     opacity:1;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 130vh;
   }
   &__icon{
     position: relative;
@@ -477,10 +502,25 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 2em 3em;
+    padding: 2em 4rem;
+    margin: 0 3rem;
     transition: background 250ms ease-in;
     background: var(--background);
 
+    @include respond(tab-land) {
+      display: none;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    @include respond(phone-big) {
+      display: none;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   .main-nav{
@@ -544,3 +584,4 @@
     color:$color-black;
   }
 }
+

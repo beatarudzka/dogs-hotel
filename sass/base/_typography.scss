@@ -147,7 +147,7 @@ body{
   color:$color-grey-light-2;
   font-size: 4.5rem;
 
-  @include respond(phone) {
+  @include respond(phone-big) {
     display: none;
   }
 }
