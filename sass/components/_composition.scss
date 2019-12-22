@@ -18,13 +18,13 @@
     right:0;
     transform: translate(-62%, 7.5%);
     
-    // @include respond(tab-port) {
-    //  width:100%;
-    // }
-    // @include respond(phone) {
-    //  width:100%;
-    //  transform: translate(-50%, -50%);
-    // }
+    @include respond(phone) {
+     width:100%;
+     transform: translate(-50%, -50%);
+     top:10%;
+     left:50%;
+     margin:7rem 0;
+    }
   }
   &__card--2{
     position: absolute;
@@ -37,12 +37,18 @@
     background-color: $color-white;
     height:93vh;
     box-shadow: 0 .5rem .5rem rgba($color-black, .2);
+    
+    @include respond(phone) {
+      width:100%;
+      transform: translate(-50%, -50%);
+      top:50%;
+      left:50%;
+     }
   }
 
   &__card--3{
     position: absolute;
     text-align: center;
-    padding: 14rem 0;
     width:90%;
     height:75vh;
     padding: 0;
@@ -50,6 +56,14 @@
     z-index: 500;
     background-color: $color-white;
     box-shadow: 0 .5rem .5rem rgba($color-black, .2);
+
+    @include respond(phone) {
+      width:100%;
+      transform: translate(-50%, -50%);
+      top:85%;
+      left:50%;
+      padding: 14rem 0;
+     }
   }
   
   &__photo{
@@ -68,6 +82,14 @@
       position: absolute;
       z-index: 0;
       overflow: hidden;
+
+      @include respond(phone) {
+        width:100%;
+        transform: translate(-50%, -50%);
+        top:20%;
+        left:50%;
+        margin:7rem 0;
+       }
     }
     &--2{
       height: 30rem;

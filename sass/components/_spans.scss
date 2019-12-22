@@ -4,6 +4,10 @@
   background: $color-red-dark;
   display:block;
   margin-top: 2rem;
+
+  @include respond(phone) {
+    width: 40%;
+  }
 }
 
 .span__white{

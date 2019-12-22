@@ -121,7 +121,8 @@ body {
   @media (max-width: 25em) {
     .heading-secondary {
       font-size: 5rem;
-      margin-bottom: .5rem; } }
+      margin: 0rem;
+      padding: 0; } }
   .heading-secondary__testimonials {
     color: #000; }
     @media (max-width: 75em) {
@@ -131,18 +132,20 @@ body {
       .heading-secondary__testimonials {
         font-size: 1.8rem; } }
   .heading-secondary__paragraph {
-    margin: 3rem 15rem 2rem 5rem;
-    font-size: 3.4vw;
+    margin-left: 0;
+    font-size: 7.467vw;
+    letter-spacing: -.061vw;
     padding: 5rem;
     font-weight: 100;
     text-align: left;
-    line-height: 1.1; }
+    line-height: 1.1;
+    display: block; }
     @media (max-width: 75em) {
       .heading-secondary__paragraph {
         font-size: 4rem; } }
     @media (max-width: 25em) {
       .heading-secondary__paragraph {
-        font-size: 3rem;
+        font-size: 4.5rem;
         margin-bottom: .5rem; } }
 
 .heading-tertiary {
@@ -171,7 +174,8 @@ body {
   @media (max-width: 25em) {
     .paragraph {
       font-size: 1.8rem;
-      margin-bottom: .5rem; } }
+      margin-bottom: .5rem;
+      width: 80vw; } }
   .paragraph__left {
     position: relative;
     font-size: 1.8rem;
@@ -180,7 +184,8 @@ body {
     padding-left: 5rem;
     padding-right: 10rem;
     text-align: left;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    width: 80vw; }
   .paragraph__column {
     color: #000; }
     @media (max-width: 75em) {
@@ -268,10 +273,10 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
-    top: 3.5rem;
-    left: 3.5rem; }
+    top: 4.5rem;
+    left: 4.5rem; }
   .header__logo {
-    height: 3.5rem;
+    height: 4.5rem;
     position: fixed; }
   .header__text-box {
     position: absolute;
@@ -338,7 +343,7 @@ body {
   box-sizing: inherit;
   width: 100vw;
   height: 100%;
-  z-index: 999;
+  z-index: 900;
   position: fixed;
   top: -100%;
   margin: 0;
@@ -414,14 +419,12 @@ body {
         text-align: left;
         left: 30%;
         top: 70%;
-        margin-top: 4rem;
-        margin-bottom: 5rem; } }
+        margin: .5rem 3rem .5rem 6rem; } }
     @media (max-width: 25em) {
       .navigation__list {
         text-align: left;
         left: 30%;
-        margin-top: 8rem;
-        margin-bottom: 5rem; } }
+        margin: .5rem 3rem .5rem 5rem; } }
   .navigation__item {
     display: inline-block;
     padding: 1rem;
@@ -553,19 +556,20 @@ body {
         width: 100vw; } }
     @media (max-width: 37.5em) {
       .navigation__footer {
-        width: 100vw;
+        width: 80vw;
         margin-top: 5rem;
         position: relative;
         transform: translate(-50%, 350%);
         height: 30rem; } }
     @media (max-width: 25em) {
       .navigation__footer {
-        width: 100vw;
+        width: 80vw;
         margin-top: 5rem;
+        padding-right: 5rem;
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 200%);
+        transform: translate(-35%, 300%);
         height: 20rem; } }
     .navigation__footer--item {
       display: inline-block;
@@ -584,7 +588,8 @@ body {
           position: relative;
           transform: translate(-50%, -50%);
           top: 50%;
-          left: 50%; } }
+          left: 10%;
+          box-sizing: inherit; } }
     .navigation__footer--link:link, .navigation__footer--link:visited {
       position: relative;
       font-size: 2rem;
@@ -602,7 +607,8 @@ body {
           color: #f1f1f1; } }
       @media (max-width: 25em) {
         .navigation__footer--link:link, .navigation__footer--link:visited {
-          color: #f1f1f1; } }
+          color: #f1f1f1;
+          font-size: 2.5rem; } }
     .navigation__footer--link:hover, .navigation__footer--link:active {
       text-decoration: none; }
     .navigation__footer--link::after {
@@ -801,7 +807,7 @@ body {
   font-size: 1.6rem;
   color: #000;
   cursor: pointer;
-  z-index: 1000; }
+  z-index: 800; }
   .btn:active, .btn:focus, .btn:link:active, .btn:link:focus, .btn:visited:active, .btn:visited:focus {
     outline: none;
     transform: translateY(-1px);
@@ -924,6 +930,13 @@ body {
     top: 0;
     right: 0;
     transform: translate(-62%, 7.5%); }
+    @media (max-width: 25em) {
+      .composition__card--1 {
+        width: 100%;
+        transform: translate(-50%, -50%);
+        top: 10%;
+        left: 50%;
+        margin: 7rem 0; } }
   .composition__card--2 {
     position: absolute;
     text-align: center;
@@ -935,10 +948,15 @@ body {
     background-color: #fff;
     height: 93vh;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 25em) {
+      .composition__card--2 {
+        width: 100%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%; } }
   .composition__card--3 {
     position: absolute;
     text-align: center;
-    padding: 14rem 0;
     width: 90%;
     height: 75vh;
     padding: 0;
@@ -946,6 +964,13 @@ body {
     z-index: 500;
     background-color: #fff;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 25em) {
+      .composition__card--3 {
+        width: 100%;
+        transform: translate(-50%, -50%);
+        top: 85%;
+        left: 50%;
+        padding: 14rem 0; } }
   .composition__photo {
     position: relative;
     padding: 0;
@@ -961,6 +986,13 @@ body {
       position: absolute;
       z-index: 0;
       overflow: hidden; }
+      @media (max-width: 25em) {
+        .composition__photo--1 {
+          width: 100%;
+          transform: translate(-50%, -50%);
+          top: 20%;
+          left: 50%;
+          margin: 7rem 0; } }
     .composition__photo--2 {
       height: 30rem;
       position: absolute;
@@ -990,6 +1022,9 @@ body {
   background: #e74c3c;
   display: block;
   margin-top: 2rem; }
+  @media (max-width: 25em) {
+    .span__red {
+      width: 40%; } }
 
 @media (max-width: 37.5em) {
   .span__white {
@@ -1051,7 +1086,13 @@ body {
   justify-content: flex-end;
   padding: 2em 4rem;
   margin: 0 3rem;
-  transition: background 250ms ease-in; }
+  transition: background 250ms ease-in;
+  overflow: hidden; }
+  @media (max-width: 25em) {
+    .menu {
+      width: 100vw;
+      margin: 0;
+      padding: 0; } }
   .menu__list {
     list-style: none;
     padding: 0;
@@ -1125,9 +1166,9 @@ body {
   @media (max-width: 25em) {
     .toggle-btn {
       background-color: transparent;
-      top: 0;
+      top: 10vh;
       right: 0;
-      transform: translate(80%, -50%); } }
+      transform: translate(15%, -10%); } }
   .toggle-btn__span--one {
     position: absolute;
     width: 4rem;
