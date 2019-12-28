@@ -1,13 +1,32 @@
 .footer{
   background-color:$color-green-olive;
-  padding: 2rem 0;
+  padding: 10rem 0;
   width: 100%;
+  position: relative;
+  text-align: center;
 
   &__logo-box{
     top:4rem;
     left: 4rem;
-    padding-left:2rem;
     display: inline-block;
+
+
+    @include respond(phone-big) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin:3rem;
+      padding: 2rem;
+      position: absolute;
+      display: block;
+    }
+    @include respond(phone) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin:3rem;
+      padding: 2rem;
+      position: absolute;
+      display: block;
+    }
   }
   &__logo{
     width: 7rem;
@@ -16,29 +35,81 @@
   &__newsletter{
     color:$color-white;
 
+    @include respond(phone-big) {
+      margin: 2rem;
+      display:block;
+      text-align: center;
+    }
+    @include respond(phone) {
+      margin: 2rem;
+    
+      
+      &--code{
+        left: 50%;
+        transform: translate(20%, -50%);
+        font-size: 1.8rem;
+
+        @include respond(phone-big){
+          font-size: 1.8rem;
+          width: 70%;
+        }
+        @include respond(phone){
+          font-size: 1.8rem;
+          width: 70%;
+        }
+      }
+    }
+
     &--sign-up{
       cursor: pointer;
       text-decoration: none;
       color:$color-grey-light-1;
+
+      @include respond(phone-big) {
+        left: 50%;
+        transform: translate(20%, -50%);
+        font-size: 2rem;
+        width: 70%;
+        margin-top: 3rem;
+      }
+      @include respond(phone) {
+        left: 50%;
+        transform: translate(20%, -50%);
+        font-size: 1.8rem;
+        width: 70%;
+      }
     }
   }
   
   &__navigation{
-    margin-left:2rem;
     border-top: 1px solid $color-white;
     color:$color-white;
     padding: .5rem;
     display:inline-block;
     font-size: 1.4rem;
+    text-align: center;
+
+    @include respond(phone-big) {
+      font-size: 1.9rem;
+      margin: 0 auto;
+      width: 90vw;
+    }
+    @include respond(phone) {
+      font-size: 1.8rem;
+      margin: 0 auto;
+      width: 90vw;
+    }
   }
   &__list{
     list-style: none;
   }
   &__item{
     cursor:pointer;
-    display: inline-block;
     padding: .2rem;
 
+    @include respond(phone-big) {;
+      left: 50%;
+    }
     &:not(:last-child){
       margin-right: 1.5rem;
     }
@@ -50,6 +121,14 @@
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
+
+      @include respond(phone-big) {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      @include respond(phone) {
+        font-size: 1.8rem;
+      }
     }
 
     &:hover,
@@ -64,5 +143,12 @@
     color:$color-grey-dark;;
     padding-top: 1rem;
     font-size: 1.1rem;
+
+    @include respond(phone-big) {
+      font-size: 1.5rem;
+    }
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 }

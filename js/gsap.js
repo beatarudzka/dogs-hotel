@@ -41,14 +41,6 @@ t1.to(".navigation", .3, {
 
 
 
-t1.staggerFrom(".footer__list", .3, {
-  x: -200,
-  opacity: 0,
-  ease: Expo.easeInOut,
-}, 0.1)
-
-
-
 t1.reverse()
 $(document).on("click", ".toggle-btn", function () {
   t1.reversed(!t1.reversed())

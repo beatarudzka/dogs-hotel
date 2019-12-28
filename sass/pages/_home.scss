@@ -1,20 +1,21 @@
 .section-info{
   background-color: $color-grey-light-1;
-  height: 500vh;
+  // height: 500vh;
   padding: 20rem 0;
   margin-top: -20vh;
   z-index: -5;
+  position:relative;
 }
 
 .section-features{
-  height: 40vh;
+  // height: 40vh;
   padding: 4rem 2rem;
   background-color: $color-green-olive;
   margin:0;
 }
 .section-testimonials{
   position: relative;
-  height: 80vh;
+  // height: 80vh;
   padding: 15rem 0;
 }
 
@@ -22,7 +23,7 @@
   padding: 6rem 0;
   background-image:linear-gradient($color-grey-light-1);
   background-size: cover;
-  height: 90vh;
+  // height: 90vh;
 }
 // .inverse{
 //   background-color: $color-green-olive;
