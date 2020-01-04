@@ -107,7 +107,7 @@
     cursor:pointer;
     padding: .2rem;
 
-    @include respond(phone-big) {;
+    @include respond(phone-big) {
       left: 50%;
     }
     &:not(:last-child){

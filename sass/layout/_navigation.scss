@@ -29,20 +29,18 @@
 
     @include respond(tab-port) {
       top:10%;
-      display: block;
       margin-bottom: 2rem;
       width: 10.5rem;
     }
     @include respond(phone-big) {
       top:20%;
-      display: block;
       margin-bottom: 2rem;
       width: 10.5rem;
     }
     @include respond(phone) {
-      display: block;
       margin-bottom: 4rem;
       width: 9.5rem;
+      top:7%;
     }
 
   }
@@ -273,8 +271,8 @@
      position: relative;
      top:50%;
      left:50%;
-     transform: translate(-35%, 300%);
-     height: 20rem;
+     transform: translate(-50%, 300%);
+     height: 20 rem;
     }
 
     &--item{
