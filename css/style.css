@@ -1,5 +1,6 @@
 /*
-0 -600px Phone only
+0 -400px Phone only
+400-600px Phone-big
 600 - 900px Tablet portrait
 900 - 1200px Tablet landscape
 1200 - 1800 desktop
@@ -158,7 +159,8 @@ body {
     @media (max-width: 25em) {
       .heading-secondary__paragraph {
         font-size: 4.5rem;
-        margin-bottom: .5rem; } }
+        margin-bottom: .5rem;
+        text-align: center; } }
 
 .heading-tertiary {
   font-size: 1.8rem;
@@ -194,7 +196,9 @@ body {
     .paragraph {
       font-size: 1.8rem;
       margin-bottom: .5rem;
-      width: 80vw; } }
+      width: 80%;
+      text-align: justify;
+      padding: 2rem; } }
   .paragraph__left {
     position: relative;
     font-size: 1.8rem;
@@ -231,7 +235,8 @@ body {
   margin-bottom: 8rem; }
 
 /*
-0 -600px Phone only
+0 -400px Phone only
+400-600px Phone-big
 600 - 900px Tablet portrait
 900 - 1200px Tablet landscape
 1200 - 1800 desktop
@@ -253,7 +258,7 @@ body {
 .section-features {
   padding: 4rem 2rem;
   background-color: #111619;
-  margin: 0; }
+  margin: 15vh 0; }
 
 .section-testimonials {
   position: relative;
@@ -639,6 +644,12 @@ body {
       right: 0;
       border-color: #e74c3c; }
 
+.info {
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5vh; }
+
 .feature-box {
   text-align: center;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.6);
@@ -997,15 +1008,150 @@ body {
         font-size: 1.4rem; } }
 
 .composition {
-  width: 100%;
+  width: 100vw;
   position: relative;
-  padding: 15rem 0; }
-  @media (max-width: 25em) {
-    .composition__card--2 {
+  padding: 5rem 0; }
+  .composition__card--1 {
+    background-color: #fff;
+    position: absolute;
+    right: 12.556vw;
+    z-index: 1;
+    padding: 5.556vw;
+    width: 27.778vw;
+    top: 20%; }
+    @media (max-width: 56.25em) {
+      .composition__card--1 {
+        width: 38.778vw;
+        transform: translate(20%, 0); } }
+    @media (max-width: 37.5em) {
+      .composition__card--1 {
+        width: 60%;
+        transform: translate(-50%, -50%);
+        top: 20%;
+        left: 60%; } }
+    @media (max-width: 25em) {
+      .composition__card--1 {
+        width: 60%;
+        transform: translate(-40%, -20%);
+        top: 60%;
+        right: 0; } }
+  .composition__card--2 {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 5.556vw; }
+    @media (max-width: 25em) {
+      .composition__card--2 {
+        width: 100%;
+        display: block;
+        top: 50%;
+        left: 0;
+        margin-top: 15vh; } }
+  .composition__card--3 {
+    background-color: #fff;
+    position: absolute;
+    right: 2.556vw;
+    z-index: 1;
+    padding: 5.556vw;
+    width: 27.778vw;
+    top: 5%; }
+    @media (max-width: 75em) {
+      .composition__card--3 {
+        right: 0;
+        transform: translate(-30%, 0);
+        width: 32.778vw;
+        top: 0; } }
+    @media (max-width: 56.25em) {
+      .composition__card--3 {
+        right: 0;
+        transform: translate(-30%, 100%);
+        width: 55.778vw; } }
+    @media (max-width: 37.5em) {
+      .composition__card--3 {
+        right: 0;
+        transform: translate(0, 50%);
+        width: 65vw;
+        display: block;
+        top: 0; } }
+    @media (max-width: 25em) {
+      .composition__card--3 {
+        width: 75vw;
+        right: 0;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        margin-bottom: 10vh;
+        height: 100%; } }
+  .composition__photo {
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 10vh;
+    position: relative; }
+    @media (max-width: 56.25em) {
+      .composition__photo {
+        margin: 5vh; } }
+    @media (max-width: 37.5em) {
+      .composition__photo {
+        margin: 5vh; } }
+    @media (max-width: 25em) {
+      .composition__photo {
+        width: 100vw;
+        margin: 0;
+        margin-bottom: 10vh; } }
+    .composition__photo--1 {
+      width: 50.444vw;
+      height: 54.44vw;
+      top: -5vw;
+      position: relative; }
+      @media (max-width: 56.25em) {
+        .composition__photo--1 {
+          width: 50.444vw;
+          height: 68.44vw; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--1 {
+          top: 0;
+          width: 83vw;
+          height: 70vh;
+          transform: translate(0%, 0); } }
+    .composition__photo--2 {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
       width: 100%;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%; } }
+      background-size: cover;
+      background-image: url(/img/house-luxury.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative; }
+      @media (max-width: 37.5em) {
+        .composition__photo--2 {
+          height: 60vh; } }
+      @media (max-width: 25em) {
+        .composition__photo--2 {
+          height: 60vh; } }
+    .composition__photo--3 {
+      top: 15vh;
+      right: 0;
+      width: 85.556vw;
+      transform: translate(0%, -20%);
+      position: relative; }
+      @media (max-width: 56.25em) {
+        .composition__photo--3 {
+          top: -0;
+          width: 95vw;
+          transform: translate(0%, -20%); } }
+      @media (max-width: 37.5em) {
+        .composition__photo--3 {
+          width: 100vw;
+          right: 0;
+          transform: translate(-40%, 0); } }
+      @media (max-width: 25em) {
+        .composition__photo--3 {
+          width: 100vw;
+          height: 50vh;
+          transform: translate(0%, -30%); } }
 
 .span__red {
   width: 20%;
@@ -1094,7 +1240,6 @@ body {
     height: 10rem; }
     @media (max-width: 75em) {
       .menu__list {
-        width: 40rem;
         height: 6rem; } }
     @media (max-width: 56.25em) {
       .menu__list {

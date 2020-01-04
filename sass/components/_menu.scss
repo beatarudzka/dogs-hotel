@@ -29,7 +29,7 @@
       height:10rem;
 
       @include respond(tab-land) {
-        width: 40rem;
+        // width: 40rem;
         height:6rem;
       }
       @include respond(tab-port) {

@@ -1,48 +1,167 @@
 .composition{
-  width: 100%;
+  width: 100vw;
   position: relative;
-  padding: 15rem 0;
+  padding: 5rem 0;
+
 
   &__card--1{
-    
+    background-color: $color-white;
+    position:absolute;
+    right: 12.556vw;
+    z-index: 1;
+    padding:5.556vw;
+    width: 27.778vw;
+    top:20%;
+
+    @include respond(tab-port) {
+      width: 38.778vw;
+      transform: translate(20%, 0);
+    }
+    @include respond(phone-big) {
+      width:60%;
+      transform: translate(-50%, -50%);
+      top:20%;
+      left:60%;
+    }
     @include respond(phone) {
-     
+      width:60%;
+      transform: translate(-40%, -20%);
+      top:60%;
+      right:0;
     }
   }
   &__card--2{
-   
+    background-color: $color-white;
+    position: relative;
+    z-index: 1;
+    padding:5.556vw;
     
     @include respond(phone) {
       width:100%;
-      transform: translate(-50%, -50%);
+      display: block;
       top:50%;
-      left:50%;
+      left:0;
+      margin-top: 15vh;
      }
   }
 
   &__card--3{
-   
+    background-color: $color-white;
+    position:absolute;
+    right: 2.556vw;
+    z-index: 1;
+    padding:5.556vw;
+    width: 27.778vw;
+    top:5%;
 
-    @include respond(phone) {
-    
+    @include respond(tab-land) {
+     right:0;
+     transform:translate(-30%, 0);
+     width: 32.778vw;
+     top:0;
      }
+     @include respond(tab-port) {
+      right:0;
+      transform:translate(-30%, 100%);
+      width: 55.778vw;
+      }
+    @include respond(phone-big) {
+      right:0;
+      transform:translate(0, 50%);
+      width: 65vw;
+      display:block;
+      top:0;
+    }
+    @include respond(phone) {
+      width: 75vw;
+      right:0;
+      top:-5%;
+      left:50%;
+      transform: translate(-50%, 50%);
+      margin-bottom: 10vh;
+      height:100%;
+    }
   }
   
   &__photo{
-  
-    
-    &--1{
-     
-      @include respond(phone) {
-        
-       }
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    margin:10vh;
+    position: relative;
+
+    @include respond(tab-port) {
+      margin:5vh;
     }
+    @include respond(phone-big) {
+      margin:5vh;
+    }
+    @include respond(phone) {
+      width:100vw;  
+      margin:0;
+      margin-bottom: 10vh;
+    }
+
+    &--1{
+     width:50.444vw;
+     height:54.44vw;
+     top:-5vw;
+     position:relative;
+
+     @include respond(tab-port) {
+      width:50.444vw;
+      height:68.44vw;
+    }
+    @include respond(phone-big) {
+      top:0;
+      width:83vw;
+      height:70vh;
+      transform: translate(0%, 0);
+    }
+    }
+
     &--2{
-     
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      background-size: cover;
+      background-image: url(/img/house-luxury.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+
+      @include respond(phone-big) {
+        height:60vh;
+      }
+      @include respond(phone) {
+        height:60vh;
+      }
     }
 
     &--3{
-    
+      top:15vh;
+      right:0;
+      width:85.556vw;
+      transform: translate(0%, -20%);
+      position: relative;
+
+      @include respond(tab-port) {
+        top:-0;
+        width:95vw;
+        transform: translate(0%, -20%);
+      }
+      @include respond(phone-big) {
+        width: 100vw;
+        right:0;
+        transform:translate(-40%, 0);
+      }
+      @include respond(phone) {
+        width: 100vw;
+        height: 50vh;
+        transform: translate(0%, -30%);
+      }
     }
   }
 }
