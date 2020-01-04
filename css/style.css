@@ -738,11 +738,34 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../../img/img2.jpg); }
   .reservation__logo-box {
     height: 100%; }
+    @media (max-width: 75em) {
+      .reservation__logo-box {
+        height: 80%; } }
+    @media (max-width: 56.25em) {
+      .reservation__logo-box {
+        height: 70%; } }
+    @media (max-width: 37.5em) {
+      .reservation__logo-box {
+        height: 70%; } }
   .reservation__logo {
     height: 14rem;
     display: block;
     margin: 3rem;
     cursor: pointer; }
+    @media (max-width: 75em) {
+      .reservation__logo {
+        display: inline-block; } }
+    @media (max-width: 56.25em) {
+      .reservation__logo {
+        display: inline-block; } }
+    @media (max-width: 37.5em) {
+      .reservation__logo {
+        display: inline-block;
+        height: 10rem; } }
+    @media (max-width: 37.5em) {
+      .reservation__logo {
+        display: inline-block;
+        height: 9rem; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -1111,9 +1134,9 @@ body {
       @media (max-width: 37.5em) {
         .composition__photo--1 {
           top: 0;
-          width: 83vw;
-          height: 70vh;
-          transform: translate(0%, 0); } }
+          width: 85w;
+          height: 93vh;
+          transform: translate(10%, 10%); } }
     .composition__photo--2 {
       height: 100vh;
       padding: 0;

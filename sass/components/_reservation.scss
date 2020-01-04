@@ -12,13 +12,48 @@
                   rgba($color-white, .6)0%,
                   rgba($color-white, .6)50%,
                   transparent 50%), url(../../img/img2.jpg);
+
+@include respond(tab-land) {
+   
+  }
+@include respond(tab-port) {
+   
+  }
+@include respond(phone-big) {
+   
+  }
   &__logo-box{
     height: 100%;
+
+    @include respond(tab-land) {
+     height:80%;
+    }
+    @include respond(tab-port) {
+      height:70%;
+     }
+     @include respond(phone-big) {
+      height:70%;
+     }
    }
   &__logo{
       height: 14rem;
       display: block;
       margin: 3rem;
       cursor: pointer;
+
+      @include respond(tab-land) {
+        display: inline-block;
+       }
+       @include respond(tab-port) {
+        display: inline-block;
+       }
+       @include respond(phone-big) {
+        display: inline-block;
+        height:10rem;
+       }
+       @include respond(phone-big) {
+        display: inline-block;
+        height:9rem;
+       }
   }
 }
