@@ -29,7 +29,6 @@
       height:10rem;
 
       @include respond(tab-land) {
-        // width: 40rem;
         height:6rem;
       }
       @include respond(tab-port) {
@@ -127,6 +126,13 @@
       background: $color-white;
       margin-top: 5rem;
       margin-left: 3rem;
+
+      @include respond(phone-big) {
+        margin-top: 4.7rem;
+       }
+       @include respond(phone) {
+        margin-top: 5.1rem;
+       }
     }
     &--three{
       position: absolute;

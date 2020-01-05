@@ -403,7 +403,8 @@ body {
     width: 8.5rem;
     text-align: center;
     padding-top: 3rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    display: block; }
     @media (max-width: 56.25em) {
       .navigation__logo {
         width: 9.5rem;
@@ -436,13 +437,16 @@ body {
       .navigation__list {
         text-align: left;
         left: 30%;
-        top: 70%;
-        margin: .5rem 3rem .5rem 6rem; } }
+        top: 60vh;
+        margin: .5rem 3rem .5rem 5rem;
+        display: block; } }
     @media (max-width: 25em) {
       .navigation__list {
         text-align: left;
         left: 30%;
-        margin: .5rem 3rem .5rem 5rem; } }
+        top: 60vh;
+        margin: .5rem 3rem .5rem 5rem;
+        display: block; } }
   .navigation__item {
     display: inline-block;
     padding: 1rem;
@@ -467,7 +471,7 @@ body {
         margin: 0.5rem; } }
   .navigation__link:link, .navigation__link:visited {
     position: relative;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     text-decoration: none;
     cursor: pointer;
@@ -481,16 +485,16 @@ body {
     @media (max-width: 56.25em) {
       .navigation__link:link, .navigation__link:visited {
         font-size: 3rem; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 37.5em) and (min-height: 33.75em) {
       .navigation__link:link, .navigation__link:visited {
         margin-top: 1rem;
-        font-size: 5rem;
+        font-size: 4rem;
         margin: .5rem;
         font-weight: 200; } }
-    @media (max-width: 25em) {
+    @media (max-width: 25em) and (min-height: 18.75em) {
       .navigation__link:link, .navigation__link:visited {
         margin-top: 1rem;
-        font-size: 5rem;
+        font-size: 3rem;
         margin: .5rem;
         font-weight: 200; } }
   .navigation__link:hover, .navigation__link:active {
@@ -561,7 +565,6 @@ body {
         margin-top: 5rem;
         padding-top: 5rem;
         padding-bottom: 3rem;
-        transform: translate(-50%, 50%);
         width: 100vw;
         text-align: center;
         bottom: 5%; } }
@@ -570,7 +573,6 @@ body {
         margin-top: 5rem;
         padding-top: 5rem;
         padding-bottom: 3rem;
-        transform: translate(-50%, -50%);
         width: 100vw; } }
     @media (max-width: 37.5em) {
       .navigation__footer {
@@ -578,7 +580,7 @@ body {
         margin-top: 5rem;
         position: relative;
         transform: translate(-50%, 350%);
-        height: 30rem; } }
+        height: 26rem; } }
     @media (max-width: 25em) {
       .navigation__footer {
         width: 80vw;
@@ -587,8 +589,8 @@ body {
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 300%);
-        height: 20 rem; } }
+        transform: translate(-50%, 250%);
+        height: 20rem; } }
     .navigation__footer--item {
       display: inline-block;
       padding: 2rem;
@@ -621,12 +623,21 @@ body {
           color: #f1f1f1; } }
       @media (max-width: 56.25em) {
         .navigation__footer--link:link, .navigation__footer--link:visited {
-          font-size: 1.6rem;
+          font-size: 2.1rem;
+          left: 30%;
           color: #f1f1f1; } }
+      @media (max-width: 37.5em) {
+        .navigation__footer--link:link, .navigation__footer--link:visited {
+          color: #f1f1f1;
+          font-size: 2rem;
+          left: 30%;
+          line-height: normal; } }
       @media (max-width: 25em) {
         .navigation__footer--link:link, .navigation__footer--link:visited {
           color: #f1f1f1;
-          font-size: 2.5rem; } }
+          font-size: 2.1rem;
+          left: 30%;
+          line-height: normal; } }
     .navigation__footer--link:hover, .navigation__footer--link:active {
       text-decoration: none; }
     .navigation__footer--link::after {
@@ -1340,6 +1351,12 @@ body {
     background: #fff;
     margin-top: 5rem;
     margin-left: 3rem; }
+    @media (max-width: 37.5em) {
+      .toggle-btn__span--two {
+        margin-top: 4.7rem; } }
+    @media (max-width: 25em) {
+      .toggle-btn__span--two {
+        margin-top: 5.1rem; } }
   .toggle-btn__span--three {
     position: absolute;
     width: 4rem;

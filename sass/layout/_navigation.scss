@@ -50,6 +50,7 @@
     text-align: center;
     padding-top: 3rem;
     margin-bottom: 3rem;
+    display: block;
 
     @include respond(tab-port) {
       width: 9.5rem;
@@ -87,14 +88,16 @@
     @include respond(phone-big) {
       text-align: left;
       left:30%;
-      top:70%;
-      margin: .5rem 3rem .5rem 6rem;
-     
+      top:60vh;
+      margin: .5rem 3rem .5rem 5rem;
+      display: block;
     }
     @include respond(phone) {
       text-align: left;
       left:30%;
+      top:60vh;
       margin: .5rem 3rem .5rem 5rem;
+      display: block;
     }
   }
   &__item{
@@ -125,13 +128,14 @@
     &:link,
     &:visited{
       position: relative;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 300;
       text-decoration: none;
       cursor: pointer;
       color: $color-white;
       z-index:2000;
 
+      
       @include respond(tab-land) {
         font-size: 3rem;
         padding:.5rem;
@@ -140,15 +144,15 @@
       @include respond(tab-port) {
         font-size: 3rem;
       }
-      @include respond(phone-big) {
+      @media (max-width:37.5em) and (min-height: 33.75em){
         margin-top: 1rem;
-        font-size: 5rem;
+        font-size: 4rem;
         margin:.5rem;
         font-weight: 200;
       }
-      @include respond(phone) {
+      @media (max-width:25em) and (min-height: 18.75em) { 
         margin-top: 1rem;
-        font-size: 5rem;
+        font-size: 3rem;
         margin:.5rem;
         font-weight: 200;
       }
@@ -245,7 +249,7 @@
       margin-top:5rem;
       padding-top: 5rem;
       padding-bottom: 3rem;
-      transform: translate(-50%, 50%);
+      // transform: translate(-50%, 50%);
       width: 100vw;
       text-align: center;
       bottom: 5%;
@@ -254,7 +258,7 @@
       margin-top:5rem;
       padding-top: 5rem;
       padding-bottom: 3rem;
-      transform: translate(-50%, -50%);
+      // transform: translate(-50%, -50%);
       width: 100vw;
     }
     @include respond(phone-big) {
@@ -262,7 +266,7 @@
       margin-top:5rem;
       position: relative;
       transform: translate(-50%, 350%);
-      height: 30rem;
+      height: 26rem;
      }
     @include respond(phone) {
      width: 80vw;
@@ -271,8 +275,8 @@
      position: relative;
      top:50%;
      left:50%;
-     transform: translate(-50%, 300%);
-     height: 20 rem;
+     transform: translate(-50%, 250%);
+     height: 20rem;
     }
 
     &--item{
@@ -312,14 +316,24 @@
           color: $color-grey-light-1;
         }
         @include respond(tab-port) {
-          font-size: 1.6rem;
+          font-size: 2.1rem;
+          left:30%;
           color: $color-grey-light-1;
+        }
+        @include respond(phone-big) {
+          color: $color-grey-light-1;
+          font-size: 2rem;
+          left:30%;
+          line-height: normal;
         }
         @include respond(phone) {
           color: $color-grey-light-1;
-          font-size: 2.5rem;
+          font-size: 2.1rem;
+          left:30%;
+          line-height: normal;
         }
       }
+      
       &:hover,
       &:active{
         text-decoration: none;
@@ -339,10 +353,9 @@
         right:0;
         border-color: $color-red-dark;
       }
+      }
     }
   }
 
   
-
-}
 
