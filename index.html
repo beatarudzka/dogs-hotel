@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700,800&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="./css/icon-font.css"> -->
-
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
@@ -107,7 +105,9 @@
               </button>
             </div>
             <div class="composition__photo">
-              <img src="./img/marquise-kamanke.jpg" alt="Photo1" class="composition__photo--1">
+              <img srcset="./img/beach-boy_min.jpg 600w,  ./img/beach-boy.jpg 1200w "
+                sizes="(max-width:900px) 40vw, (max-width:600px) 50vw, 600px" alt="Photo1" class="composition__photo--1"
+                src="./img/beach-boy.jpg">
             </div>
           </div>
 
@@ -161,7 +161,9 @@
               </button>
             </div>
             <div class="composition__photo">
-              <img src="./img/bed-animal.jpg" alt="Photo3" class="composition__photo--3">
+              <img srcset="./img/bed-animal_min.jpg 1200w, ./../bed-animal.jpg 1900w "
+                sizes="(max-width:900px) 40vw, (max-width:600px) 50vw, 600px" alt="Photo3" class="composition__photo--3"
+                src="./img/bed-animal.jpg" />
             </div>
           </div>
         </div>
@@ -292,7 +294,7 @@
                   </div>
 
                   <div class="form_group">
-                    <div clas1s="form__radio-group">
+                    <div class="form__radio-group">
                       <input type="radio" class="form__radio-input" id="hotel" name="service">
                       <label for="hotel" class="form__radio-label">
                         <span class="form__radio-button"></span>

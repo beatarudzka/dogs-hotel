@@ -1,5 +1,4 @@
 .reservation{
-  background-image: url(/img/img2.jpg);
   background-size: cover;
   height: 50rem;
   width: 100%;
@@ -14,13 +13,22 @@
                   transparent 50%), url(../../img/img2.jpg);
 
 @include respond(tab-land) {
-   
+  background-image: linear-gradient(105deg,
+                  rgba($color-white, .6)0%,
+                  rgba($color-white, .6)50%,
+                  transparent 50%), url(../../img/img2_min.jpg);
   }
 @include respond(tab-port) {
-   
+   background-image: linear-gradient(105deg,
+                  rgba($color-white, .6)0%,
+                  rgba($color-white, .6)50%,
+                  transparent 50%), url(../../img/img2_min.jpg);
   }
 @include respond(phone-big) {
-   
+   background-image: linear-gradient(105deg,
+                  rgba($color-white, .6)0%,
+                  rgba($color-white, .6)50%,
+                  transparent 50%), url(../../img/img2_min.jpg);
   }
   &__logo-box{
     height: 100%;

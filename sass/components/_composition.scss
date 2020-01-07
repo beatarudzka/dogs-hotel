@@ -134,9 +134,11 @@
 
       @include respond(phone-big) {
         height:60vh;
+        background-image: url(/img/house-luxury_min.jpg);
       }
       @include respond(phone) {
         height:60vh;
+        background-image: url(/img/house-luxury_min.jpg);
       }
     }
 

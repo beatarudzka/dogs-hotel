@@ -28,28 +28,63 @@
 }
 @keyframes slide{
   0%{
-    background-image: linear-gradient(
-      to right,
-       rgba($color-black, .5), rgba($color-black, .6) ), url(/img/jenny-marvin.jpg);
-  }
-  25%{
     background-image:linear-gradient(
       to right,
        rgba($color-black, .5), rgba($color-black, .6) ),  url(/img/julian-schiemann.jpg);
+       @include respond(phone-big) {
+        background-image:linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ),  url(/img/julian-schiemann_min.jpg);
+      }
+       @include respond(phone) {
+        background-image:linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ),  url(/img/julian-schiemann_min.jpg);
+      }
   }
-  50%{
+  30%{
     background-image: linear-gradient(
       to right,
        rgba($color-black, .5), rgba($color-black, .6) ), url(/img/camilo-fierro.jpg);
+       @include respond(phone-big){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/camilo-fierro_min.jpg);
+       }
+       @include respond(phone){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/camilo-fierro_min.jpg);
+       }
   }
-  75%{
+  60%{
     background-image: linear-gradient(
       to right,
        rgba($color-black, .5), rgba($color-black, .6) ), url(/img/img-1.jpg);
+       @include respond(phone-big){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/img-1_min.jpg);
+       }
+       @include respond(phone){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/img-1_min.jpg);
+       }
   }
   100%{
     background-image: linear-gradient(
       to right,
        rgba($color-black, .5), rgba($color-black, .6) ), url(/img/meg-sanchez.jpg);
+       @include respond(phone-big){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/meg-sanchez_min.jpg);
+       }
+       @include respond(phone){
+        background-image: linear-gradient(
+          to right,
+           rgba($color-black, .5), rgba($color-black, .6) ), url(/img/meg-sanchez_min.jpg);
+       }
   }
 }
